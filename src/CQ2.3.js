@@ -14,5 +14,6 @@ function printBookInfo({ title, author, year }) {
     console.log(`author: ${author}`);
     console.log(`year: ${year}`);
 }
-const book = { title: "hack", author: "TN", year: 2004 };
+const book = { title: "tele", author: "TN", year: 2004 };
 printBookInfo(book);   
+
