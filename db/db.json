@@ -1,0 +1,29 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Chrismas with F-Active",
+      "category": "Mùa Đông",
+      "description": "...",
+      "image": "x-mas.jpg",
+      "price": 10000
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "name": "Nguyễn Văn A",
+      "email": "a@gmail.com",
+      "phone": "0123456",
+      "content": "Cho hỏi vé bao nhiêu?",
+      "status": "unread"
+    }
+  ],
+  "admins": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "123456"
+    }
+  ]
+}
