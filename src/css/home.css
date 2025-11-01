@@ -1,153 +1,110 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-*/
-
 /* Home Container */
 .home-container {
   background-color: #000;
   min-height: 100vh;
   color: #fff;
   padding: 2rem;
-}
-
-.home-content {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-/* Header Section */
-.home-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
-}
-
-.search-result-title {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #b3b3b3;
-}
-
-.filter-button {
-  background-color: transparent;
-  border: 1px solid #555;
-  color: #fff;
-  padding: 0.5rem 1.5rem;
-  border-radius: 20px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.95rem;
-  transition: background-color 0.3s ease;
-}
-
-.filter-button:hover {
-  background-color: #222;
-}
-
-.filter-icon {
-  font-size: 1.2rem;
-}
-
-.dropdown-icon {
-  font-size: 0.8rem;
+  flex-direction: column;
 }
 
 /* Events Grid */
 .events-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 1.5rem; /* Increased gap between cards */
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /* Event Card */
 .event-card {
-  background-color: #111;
+  width: 100%;
+  max-width: 312px;  /* Fixed width for each card */
+  height: 307px;
+  border: none;
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent; /* Transparent background */
 }
 
 .event-card:hover {
   transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Event Image */
-.event-image-container {
+.event-card img {
   width: 100%;
-  height: 200px;
-  overflow: hidden;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  margin-bottom: 0.5rem; /* Added margin to create space between title and image */
 }
 
-.event-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.event-card:hover img {
+  transform: scale(1.05);
 }
 
 /* Event Info */
 .event-info {
-  padding: 1rem;
+  padding: 0.5rem 0; /* Adjusted padding for closer spacing */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
 }
 
 .event-title {
-  font-size: 0.95rem;
+  font-size: 1rem; /* Slightly increased font size */
   font-weight: 600;
-  margin-bottom: 0.75rem;
-  line-height: 1.4;
-  height: 2.8em;
+  height: 2.5em;
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  color: #fff;
+  margin-bottom: 0.25rem; /* Reduced margin to bring title and price closer */
 }
 
 .event-price {
   color: #4ade80;
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.event-date {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #888;
-  font-size: 0.85rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem; /* Reduced margin to bring elements closer */
 }
 
 .event-category {
   color: #888;
-  font-size: 0.85rem;
-  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: normal;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+  }
+
   .home-container {
     padding: 1rem;
   }
 
-  .home-header {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: flex-start;
+  .event-title {
+    font-size: 1rem;
   }
 
+  .event-price {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
   .events-grid {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1rem;
-  }
-
-  .search-result-title {
-    font-size: 1.2rem;
+    grid-template-columns: 1fr; /* 1 column for very small screens */
   }
 }
