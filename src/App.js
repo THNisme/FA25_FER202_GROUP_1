@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes } from "react-router-dom";
 
-// Các bạn import component vào đây, như ví dụ bên dưới
+// Các bạn import component vào đây, như ví dụ của navbar và footer bên dưới
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -20,6 +20,7 @@ function App() {
 
         <main className="main-content">
           <Routes>
+            {/* Các bạn setup Route như ví dụ bên dưới nhaa */}
             {/* <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} /> */}
           </Routes>
