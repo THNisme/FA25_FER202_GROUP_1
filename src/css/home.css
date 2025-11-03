@@ -7,10 +7,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start; /* 🔸 luôn căn từ trên cùng */
+  justify-content: flex-start;
 }
 
-
+/* Content Wrapper */
 .content-wrap {
   max-width: 1200px;
   width: 100%;
@@ -18,25 +18,18 @@
   align-self: flex-start;
 }
 
-
-.content-wrap h2 {
-  text-align: left;
-  margin: 0 0 1.5rem 0;
-}
-
+.content-wrap h2,
 .home-container h2 {
   text-align: left;
-  align-self: flex-start;
   margin: 0 0 1.5rem 0;
+  align-self: flex-start;
 }
 
 /* Events Grid */
 .events-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* 4 columns */
   gap: 1.5rem;
-  /* Increased gap between cards */
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
@@ -46,7 +39,6 @@
 .event-card {
   width: 100%;
   max-width: 312px;
-  /* Fixed width for each card */
   height: 307px;
   border: none;
   border-radius: 12px;
@@ -56,7 +48,6 @@
   display: flex;
   flex-direction: column;
   background-color: transparent;
-  /* Transparent background */
 }
 
 .event-card:hover {
@@ -72,7 +63,6 @@
   border-radius: 8px;
   transition: transform 0.3s ease;
   margin-bottom: 0.5rem;
-  /* Added margin to create space between title and image */
 }
 
 .event-card:hover img {
@@ -82,7 +72,6 @@
 /* Event Info */
 .event-info {
   padding: 0.5rem 0;
-  /* Adjusted padding for closer spacing */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -91,12 +80,10 @@
 
 .event-title {
   font-size: 1rem;
-  /* Slightly increased font size */
   font-weight: 600;
   height: 2.5em;
   overflow: hidden;
   margin-bottom: 0.25rem;
-  /* Reduced margin to bring title and price closer */
 }
 
 .event-price {
@@ -104,30 +91,24 @@
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
-  /* Reduced margin to bring elements closer */
 }
 
 .event-category {
   color: #888;
   font-size: 0.9rem;
-  font-weight: normal;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .events-grid {
     grid-template-columns: repeat(2, 1fr);
-    /* 2 columns for small screens */
   }
 
   .home-container {
     padding: 1rem;
   }
 
-  .event-title {
-    font-size: 1rem;
-  }
-
+  .event-title,
   .event-price {
     font-size: 1rem;
   }
@@ -136,6 +117,131 @@
 @media (max-width: 480px) {
   .events-grid {
     grid-template-columns: 1fr;
-    /* 1 column for very small screens */
   }
+}
+
+/* Filter Container */
+.filter-container {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Hàng trên: Lọc + tag + Xóa tất cả */
+/* Hàng trên: Lọc + tag + Xóa tất cả */
+.filter-top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 12px;
+}
+.filter-top > .filter-icon {
+  margin-right: 12px;    /* <-- thêm dòng này */
+}
+.filter-top .tag {
+  margin-right: 0.75rem; /* khoảng cách giữa các tag */
+}
+
+.filter-top .tag:last-of-type {
+  margin-right: 0;
+}
+
+/* Hàng dưới: Category Buttons */
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.filter-icon,
+.filter-btn,
+.clear-btn,
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  white-space: nowrap;
+}
+
+.filter-icon {
+  border: 1px solid #4ade80;
+  color: #4ade80;
+  background: transparent;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.tag {
+  background: #fff;
+  color: #000;
+  border-radius: 16px;
+  padding: 0 14px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-right: 10px;    /* khoảng cách giữa các tag */
+}
+
+.filter-btn {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn.active {
+  background: #4ade80;
+  color: #000;
+}
+
+.clear-btn {
+  border: 1px solid #f87171;
+  color: #f87171;
+  background: transparent;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: 500;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.header-with-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.header-with-filter .filter-container {
+  padding: 0;
+  margin: 0;
+}
+
+.header-with-filter .filter-buttons {
+  display: none;
+}
+
+.header-with-filter .filter-top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
 }
