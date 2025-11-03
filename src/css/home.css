@@ -5,16 +5,38 @@
   color: #fff;
   padding: 2rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start; /* 🔸 luôn căn từ trên cùng */
+}
+
+
+.content-wrap {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  align-self: flex-start;
+}
+
+
+.content-wrap h2 {
+  text-align: left;
+  margin: 0 0 1.5rem 0;
+}
+
+.home-container h2 {
+  text-align: left;
+  align-self: flex-start;
+  margin: 0 0 1.5rem 0;
 }
 
 /* Events Grid */
 .events-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
-  gap: 1.5rem; /* Increased gap between cards */
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 columns */
+  gap: 1.5rem;
+  /* Increased gap between cards */
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
@@ -23,7 +45,8 @@
 /* Event Card */
 .event-card {
   width: 100%;
-  max-width: 312px;  /* Fixed width for each card */
+  max-width: 312px;
+  /* Fixed width for each card */
   height: 307px;
   border: none;
   border-radius: 12px;
@@ -32,7 +55,8 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
-  background-color: transparent; /* Transparent background */
+  background-color: transparent;
+  /* Transparent background */
 }
 
 .event-card:hover {
@@ -47,7 +71,8 @@
   object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s ease;
-  margin-bottom: 0.5rem; /* Added margin to create space between title and image */
+  margin-bottom: 0.5rem;
+  /* Added margin to create space between title and image */
 }
 
 .event-card:hover img {
@@ -56,7 +81,8 @@
 
 /* Event Info */
 .event-info {
-  padding: 0.5rem 0; /* Adjusted padding for closer spacing */
+  padding: 0.5rem 0;
+  /* Adjusted padding for closer spacing */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -64,18 +90,21 @@
 }
 
 .event-title {
-  font-size: 1rem; /* Slightly increased font size */
+  font-size: 1rem;
+  /* Slightly increased font size */
   font-weight: 600;
   height: 2.5em;
   overflow: hidden;
-  margin-bottom: 0.25rem; /* Reduced margin to bring title and price closer */
+  margin-bottom: 0.25rem;
+  /* Reduced margin to bring title and price closer */
 }
 
 .event-price {
   color: #4ade80;
   font-size: 1.1rem;
   font-weight: 700;
-  margin-bottom: 0.25rem; /* Reduced margin to bring elements closer */
+  margin-bottom: 0.25rem;
+  /* Reduced margin to bring elements closer */
 }
 
 .event-category {
@@ -87,7 +116,8 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .events-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns for small screens */
   }
 
   .home-container {
@@ -105,6 +135,7 @@
 
 @media (max-width: 480px) {
   .events-grid {
-    grid-template-columns: 1fr; /* 1 column for very small screens */
+    grid-template-columns: 1fr;
+    /* 1 column for very small screens */
   }
 }

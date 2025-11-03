@@ -25,7 +25,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src",
-    "dev": "vite",
     "server": "json-server --watch db/db.json --port 5000"
   },
   "eslintConfig": {
@@ -47,8 +46,7 @@
     ]
   },
   "devDependencies": {
-    "@eslint/js": "^9.38.0",
-    "eslint": "^9.38.0",
+    "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.37.5",
     "globals": "^16.4.0",
     "json-server": "^1.0.0-beta.3"
