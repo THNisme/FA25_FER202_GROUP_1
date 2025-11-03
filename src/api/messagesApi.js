@@ -1,0 +1,36 @@
+// src/api/messagesApi.js
+import axios from "axios";
+
+const API_URL = "http://localhost:5000/messages";
+
+export const getMessages = async () => {
+  const response = await axios.get(API_URL);
+  return response.data;
+};
+
+export const getMessageById = async (id) => {
+  const response = await axios.get(`${API_URL}/${id}`);
+  return response.data;
+};
+
+// Gửi tin nhắn mới với ID tăng dần
+export const sendMessage = async (messageData) => {
+  const response = await axios.get(API_URL);
+  const messages = response.data;
+
+  const nextId =
+    messages.length > 0
+      ? Math.max(...messages.map((m) => Number(m.id) || 0)) + 1
+      : 1;
+
+  const newMessage = { id: nextId, ...messageData };
+  const res = await axios.post(API_URL, newMessage);
+  return res.data;
+};
+
+export const updateMessageStatus = async (id, newStatus) => {
+  const response = await axios.patch(`${API_URL}/${id}`, {
+    status: newStatus,
+  });
+  return response.data;
+};
