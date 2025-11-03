@@ -1,10 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Routes , Route} from "react-router-dom";
 
 // Các bạn import component vào đây, như ví dụ của navbar và footer bên dưới
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
+import ContactPage from "./pages/ContactPage";
 // Các bạn import page vào đây, như ví dụ bên dưới
 // import Home from "./pages/Home";
 // import About from "./pages/About";
@@ -23,6 +23,8 @@ function App() {
             {/* Các bạn setup Route như ví dụ bên dưới nhaa */}
             {/* <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} /> */}
+                      <Route path="/contact" element={<ContactPage />} />
+
           </Routes>
         </main>
 
