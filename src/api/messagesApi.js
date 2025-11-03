@@ -29,7 +29,10 @@ export const sendMessage = async (messageData) => {
   const res = await axios.post(API_URL, newMessage);
   return res.data;
 };
-
+export const deleteMessage = async (id) => {
+  const response = await axios.delete(`${API_URL}/${String(id)}`);
+  return response.data;
+};
 export const updateMessageStatus = async (id, newStatus) => {
   const response = await axios.patch(`${API_URL}/${String(id)}`, {
     status: newStatus,
