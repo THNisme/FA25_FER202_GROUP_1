@@ -17,17 +17,43 @@ const MessageBox = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const validateForm = () => {
+    const { name, email, phone, content } = formData;
+
+    if (!name.trim()) {
+      return { type: "danger", message: "Vui lòng nhập họ tên." };
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.trim())) {
+      return { type: "danger", message: "Email không hợp lệ." };
+    }
+
+
+    const phoneRegex = /^(0|\+84)(3|5|7|8|9)[0-9]{8}$/;
+    if (phone.trim() && !phoneRegex.test(phone.trim())) {
+      return { type: "danger", message: "Số điện thoại không hợp lệ (phải là số Việt Nam)." };
+    }
+
+    if (!content.trim()) {
+      return { type: "danger", message: "Vui lòng nhập nội dung liên hệ." };
+    }
+
+    return null;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.email || !formData.content) {
-      setAlert({ type: "danger", message: "Vui lòng điền đầy đủ thông tin." });
+    const validationError = validateForm();
+    if (validationError) {
+      setAlert(validationError);
       return;
     }
 
     try {
       await sendMessage({ ...formData, status: "unread" });
-      setAlert({ type: "success", message: "Gửi tin nhắn thành công!" });
+      setAlert({ type: "success", message: "🎉 Gửi tin nhắn thành công! Chúng tôi sẽ phản hồi sớm nhất có thể! Trân Trọng!" });
       setFormData({ name: "", email: "", phone: "", content: "" });
     } catch (err) {
       setAlert({ type: "danger", message: "Gửi thất bại, vui lòng thử lại!" });
@@ -35,9 +61,19 @@ const MessageBox = () => {
   };
 
   return (
-    <div className="message-box">
-      <h3>Liên hệ với chúng tôi</h3>
-      {alert && <Alert variant={alert.type}>{alert.message}</Alert>}
+    <div className="message-box p-4 rounded shadow-sm bg-light">
+      <h3 className="mb-3 text-success">Liên hệ với chúng tôi</h3>
+
+      {alert && (
+        <Alert
+          variant={alert.type}
+          onClose={() => setAlert(null)}
+          dismissible
+          className="mb-3"
+        >
+          {alert.message}
+        </Alert>
+      )}
 
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
@@ -67,10 +103,13 @@ const MessageBox = () => {
           <Form.Control
             type="text"
             name="phone"
-            placeholder="Nhập số điện thoại"
+            placeholder="Nhập số điện thoại (tuỳ chọn)"
             value={formData.phone}
             onChange={handleChange}
           />
+          <Form.Text className="text-muted">
+            VD: 0901234567 hoặc +84901234567
+          </Form.Text>
         </Form.Group>
 
         <Form.Group className="mb-3">
@@ -85,7 +124,7 @@ const MessageBox = () => {
           />
         </Form.Group>
 
-        <Button variant="success" type="submit">
+        <Button variant="success" type="submit" className="px-4">
           Gửi tin nhắn
         </Button>
       </Form>
