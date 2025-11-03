@@ -45,14 +45,22 @@ const SearchBar = () => {
   }, [q]);
 
   return (
-    <div className="home-container">
-      <div className="content-wrap">
-        <h2>{q ? `Kết quả tìm kiếm cho: “${q}”` : "Tất cả sự kiện"}</h2>
-        {loading && <p>Đang tải...</p>}
-        {!loading && <EventCard events={events} />}
-      </div>
+  <div className="home-container">
+    <div className="content-wrap">
+      <h2>{q ? `Kết quả tìm kiếm cho: “${q}”` : "Tất cả sự kiện"}</h2>
+
+      {loading && <p>Đang tải...</p>}
+
+      {!loading && events.length === 0 && (
+        <p>Không tìm thấy sự kiện nào.</p>
+      )}
+
+      {!loading && events.length > 0 && (
+        <EventCard events={events} />
+      )}
     </div>
-  );
+  </div>
+);
 };
 
 export default SearchBar;
