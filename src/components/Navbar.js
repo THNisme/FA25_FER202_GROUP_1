@@ -37,7 +37,7 @@ const NavbarApp = () => {
           </Nav>
 
           <Nav className='ms-auto'>
-            <Nav.Link as={Link} to={"/admin-path"}>
+            <Nav.Link as={Link} to={"/adminlogin"}>
               <Button className='btn btn-outline-light nav-button bg-green'>Tạo sự kiện</Button>
             </Nav.Link>
             <Nav.Link as={Link} to={"/contact"}>
