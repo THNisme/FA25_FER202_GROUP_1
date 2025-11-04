@@ -17,7 +17,7 @@ const NavbarApp = () => {
   return (
     <Navbar expand="lg" className="bg-green">
       <Container>
-        <Navbar.Brand href="#home" className='nav-brand-text'>Active Net</Navbar.Brand>
+        <Navbar.Brand as={Link} to={"/"} className='nav-brand-text'>Active Net</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
 
