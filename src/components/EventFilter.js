@@ -36,7 +36,9 @@ const EventFilter = ({ onFilterChange }) => {
     <div className="filter-container">
       {/* ✅ Dòng 1: Nút Lọc + tag được chọn */}
       <div className="filter-top-row">
-        <button className="filter-icon">🔍 Lọc</button>
+        <button className="filter-icon">
+          Bộ lọc
+        </button>
 
         {selected.map((key) => (
           <span key={key} className="tag" onClick={() => removeTag(key)}>
@@ -46,7 +48,7 @@ const EventFilter = ({ onFilterChange }) => {
 
         {selected.length > 0 && (
           <button className="clear-btn" onClick={clearAll}>
-            Xóa tất cả
+            Thiêt Lập lại
           </button>
         )}
       </div>

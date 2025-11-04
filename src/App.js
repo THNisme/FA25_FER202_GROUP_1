@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Các bạn import component vào đây, như ví dụ bên dưới
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import EventDetailPage from "./pages/EventDetailPage";
 // Các bạn import page vào đây, như ví dụ bên dưới
 // import Home from "./pages/Home";
 // import About from "./pages/About";
@@ -20,6 +21,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/searchbar" element={<SearchBar />} />
+            <Route path="/event/:id" element={<EventDetailPage />} />
             {/* <Route path="/about" element={<About />} /> */}
           </Routes>
         </main>

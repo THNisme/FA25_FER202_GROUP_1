@@ -143,11 +143,15 @@
   white-space: nowrap;
   padding-bottom: 12px;
 }
-.filter-top > .filter-icon {
-  margin-right: 12px;    /* <-- thêm dòng này */
+
+.filter-top>.filter-icon {
+  margin-right: 12px;
+  /* <-- thêm dòng này */
 }
+
 .filter-top .tag {
-  margin-right: 0.75rem; /* khoảng cách giữa các tag */
+  margin-right: 0.75rem;
+  /* khoảng cách giữa các tag */
 }
 
 .filter-top .tag:last-of-type {
@@ -181,6 +185,7 @@
   padding: 6px 12px;
   font-weight: 500;
   flex-shrink: 0;
+  margin-right: 10px;
 }
 
 .tag {
@@ -193,7 +198,8 @@
   align-items: center;
   font-size: 0.9rem;
   font-weight: 500;
-  margin-right: 10px;    /* khoảng cách giữa các tag */
+  margin-right: 10px;
+  /* khoảng cách giữa các tag */
 }
 
 .filter-btn {
@@ -244,4 +250,69 @@
   align-items: center;
   justify-content: flex-end;
   gap: 0.75rem;
+}
+
+.intro-card {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 28px;
+  background: #fff;
+  color: #111827;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .04), 0 8px 24px rgba(0, 0, 0, .06)
+}
+
+.intro-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px
+}
+
+.intro-label {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0;
+  color: #111827
+}
+
+.intro-line {
+  height: 1px;
+  background: #e5e7eb;
+  flex: 1
+}
+
+.intro-event-name {
+  text-align: center;
+  font-weight: 800;
+  margin: 4px 0 10px;
+  font-size: 1.125rem;
+  color: #111827
+}
+
+.intro-body {
+  margin-top: 4px
+}
+
+.intro-p {
+  margin: 8px 0;
+  line-height: 1.7;
+  color: #374151;
+  font-size: .98rem
+}
+
+.intro-subtitle {
+  margin: 18px 0 8px;
+  font-weight: 800;
+  letter-spacing: .2px;
+  color: #111827;
+  font-size: .95rem;
+  text-transform: uppercase
+}
+
+@media (max-width:960px) {
+  .intro-card {
+    padding: 16px 18px
+  }
 }
