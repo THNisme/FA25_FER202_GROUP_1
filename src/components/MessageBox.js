@@ -103,12 +103,11 @@ const MessageBox = () => {
           <Form.Control
             type="text"
             name="phone"
-            placeholder="Nhập số điện thoại (tuỳ chọn)"
+            placeholder="Nhập số điện thoại"
             value={formData.phone}
             onChange={handleChange}
           />
           <Form.Text className="text-muted">
-            VD: 0901234567 hoặc +84901234567
           </Form.Text>
         </Form.Group>
 

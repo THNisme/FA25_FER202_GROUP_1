@@ -3,7 +3,7 @@ import { getMessages, deleteMessage } from "../api/messagesApi";
 import { Table, Button, Alert } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const MessagesPage = () => {
+const MessageListPage = () => {
   const [messages, setMessages] = useState([]);
 
   const fetchData = async () => {
@@ -87,4 +87,4 @@ const MessagesPage = () => {
   );
 };
 
-export default MessagesPage;
+export default MessageListPage;

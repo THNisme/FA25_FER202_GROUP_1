@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ContactPage from "./pages/ContactPage";
-import MessagesPage from "./pages/MessagesPage";
+import MessageListPage from "./pages/MessageListPage";
 import MessageDetailPage from "./pages/MessageDetailPage";
 
 // Các bạn import page vào đây, như ví dụ bên dưới
@@ -27,7 +27,7 @@ function App() {
             {/* <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} /> */}
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/messages" element={<MessagesPage />} />
+            <Route path="/messages" element={<MessageListPage />} />
             <Route path="/messages/:id" element={<MessageDetailPage />} />
           </Routes>
         </main>
