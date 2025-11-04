@@ -1,6 +1,7 @@
 import { loginAdmin } from "../api/loginApi";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import "../css/adminLogin.css";
 
 function AdminLoginPage({ onLogin }) {
     const [username, setUsername] = useState("");
@@ -11,12 +12,10 @@ function AdminLoginPage({ onLogin }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError("");
-
-        // chỉ cần so khớp đúng thông tin trong db.json
+        
         const admin = await loginAdmin(username, password);
 
-        if (admin) {
-            alert("Đăng nhập thành công!");
+        if (admin) {            
             navigate("/adminselection", { state: { admin } });            
         } else {
             setError("Sai tên đăng nhập hoặc mật khẩu!");
@@ -24,10 +23,11 @@ function AdminLoginPage({ onLogin }) {
     };
 
     return (
-        <div className="container mt-5" style={{ maxWidth: 400 }}>
-            <h3 className="mb-3 text-center">Admin Login</h3>
+        <div className="admin-container">
+            
 
-            <form onSubmit={handleSubmit}>
+            <form class="login-card" onSubmit={handleSubmit}>
+                <h3 className="mb-3 text-center">Admin Login</h3>
                 <div className="mb-3">
                     <label className="form-label">Tên đăng nhập</label>
                     <input
@@ -52,7 +52,7 @@ function AdminLoginPage({ onLogin }) {
 
                 {error && <div className="alert alert-danger">{error}</div>}
 
-                <button type="submit" className="btn btn-primary w-100">
+                <button type="submit" className="btn btn-login w-100">
                     Đăng nhập
                 </button>
             </form>
