@@ -10,6 +10,8 @@ import MessageDetailPage from "./pages/MessageDetailPage";
 import HomePage from "./pages/HomePage";
 import SearchBar from "./components/SearchBar";
 import EventDetailPage from "./pages/EventDetailPage";
+import AdminSelectionPage from "./pages/AdminSelection";
+import AdminLoginPage from "./pages/AdminLoginPage ";
 // Các bạn import page vào đây, như ví dụ bên dưới
 // import Home from "./pages/Home";
 // import About from "./pages/About";
@@ -24,12 +26,14 @@ function App() {
 
         <main className="main-content">
           <Routes>
-             <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/searchbar" element={<SearchBar />} />
             <Route path="/event/:id" element={<EventDetailPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/messages" element={<MessageListPage />} />
             <Route path="/messages/:id" element={<MessageDetailPage />} />
+            <Route path="/adminlogin" element={<AdminLoginPage />} />
+            <Route path="/adminselection" element={<AdminSelectionPage />} />
           </Routes>
         </main>
 
