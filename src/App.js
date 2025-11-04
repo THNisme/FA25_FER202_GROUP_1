@@ -7,14 +7,15 @@ import Footer from "./components/Footer";
 import ContactPage from "./pages/ContactPage";
 import MessageListPage from "./pages/MessageListPage";
 import MessageDetailPage from "./pages/MessageDetailPage";
-
+import HomePage from "./pages/HomePage";
+import SearchBar from "./components/SearchBar";
+import EventDetailPage from "./pages/EventDetailPage";
 // Các bạn import page vào đây, như ví dụ bên dưới
 // import Home from "./pages/Home";
 // import About from "./pages/About";
-import HomePage from "./pages/HomePage";
+
 import "./assets/styles/global.css"; // import global style
 import "./App.css"; // style riêng cho App
-import SearchBar from "./components/SearchBar"
 function App() {
   return (
     <Router>
@@ -23,9 +24,9 @@ function App() {
 
         <main className="main-content">
           <Routes>
-            {/* Các bạn setup Route như ví dụ bên dưới nhaa */}
-            {/* <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} /> */}
+             <Route path="/" element={<HomePage />} />
+            <Route path="/searchbar" element={<SearchBar />} />
+            <Route path="/event/:id" element={<EventDetailPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/messages" element={<MessageListPage />} />
             <Route path="/messages/:id" element={<MessageDetailPage />} />
