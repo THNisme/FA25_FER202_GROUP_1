@@ -23,8 +23,7 @@ function AdminLoginPage({ onLogin }) {
     };
 
     return (
-        <div className="admin-container">
-            
+        <div className="admin-container">            
 
             <form class="login-card" onSubmit={handleSubmit}>
                 <h3 className="mb-3 text-center">Admin Login</h3>

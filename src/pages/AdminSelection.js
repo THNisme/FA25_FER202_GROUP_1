@@ -11,7 +11,8 @@ const AdminSelectionPage = ({ admin, onSelect }) => {
     return (
         <Container
             fluid
-            className="d-flex flex-column align-items-center justify-content-center vh-100 bg-light"
+            className="d-flex flex-column align-items-center justify-content-center"
+            style={{height: "90vh"}}
         >
             <h4 className="mb-5">Xin chào, {admin?.username || "Admin"}</h4>
 
