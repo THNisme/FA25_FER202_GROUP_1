@@ -32,7 +32,6 @@ const ReviewBox = ({ eventId }) => {
         email,
         rating: parseFloat(rating),
         comment,
-        date: new Date().toISOString(),
       });
       setAlert({ type: "success", message: "🎉 Cảm ơn bạn đã gửi đánh giá!" });
       setFormData({ email: "", rating: 0, comment: "" });
