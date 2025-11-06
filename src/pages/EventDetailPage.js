@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "../css/eventDetail.css";
 import IntroCard from "../components/IntroCard"
-import ReviewBox from "../components/ReviewBox";
+import ReviewBox from "../components/ReviewForm";
 const EventDetailPage = () => {
   const { id } = useParams();
   const [event, setEvent] = useState(null);

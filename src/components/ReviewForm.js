@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { addReviewToEvent } from "../api/reviewBoxApi";
+import { addReviewToEvent } from "../api/reviewFormApi";
 import { Form, Button, Alert } from "react-bootstrap";
 
 const ReviewBox = ({ eventId }) => {
