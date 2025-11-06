@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "../css/eventDetail.css";
 import IntroCard from "../components/IntroCard"
-import ReviewBox from "../components/ReviewForm";
+import ReviewFrom from "../components/ReviewForm";
 const EventDetailPage = () => {
   const { id } = useParams();
   const [event, setEvent] = useState(null);
@@ -62,7 +62,7 @@ const EventDetailPage = () => {
     </div>
 
     <div className="col-lg-4">
-      <ReviewBox eventId={id} />
+      <ReviewFrom eventId={id} />
     </div>
   </div>
 </div>
