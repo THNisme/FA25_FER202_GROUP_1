@@ -1,32 +1,39 @@
-import { loginAdmin } from "../api/loginApi";
+import { loginAdmin, getLoggedInAdmin } from "../api/loginApi";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../css/adminLogin.css";
 
-function AdminLoginPage({ onLogin }) {
+function AdminLoginPage() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
     const [error, setError] = useState("");
 
+    useEffect(() => {
+        const admin = getLoggedInAdmin();
+        if (admin) {
+            navigate("/adminselection", { state: { admin } });
+        }
+    }, [navigate]);
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError("");
-        
+
         const admin = await loginAdmin(username, password);
 
-        if (admin) {            
-            navigate("/adminselection", { state: { admin } });            
+        if (admin) {
+            navigate("/adminselection", { state: { admin } });
         } else {
             setError("Sai tên đăng nhập hoặc mật khẩu!");
         }
     };
 
     return (
-        <div className="admin-container">            
-
-            <form class="login-card" onSubmit={handleSubmit}>
+        <div className="admin-container">
+            <form className="login-card" onSubmit={handleSubmit}>
                 <h3 className="mb-3 text-center">Admin Login</h3>
+
                 <div className="mb-3">
                     <label className="form-label">Tên đăng nhập</label>
                     <input

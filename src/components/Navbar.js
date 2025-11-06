@@ -1,6 +1,7 @@
 import { Container, Nav, Navbar, Form, FormControl, Button } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { getLoggedInAdmin } from "../api/loginApi";
 const NavbarApp = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
@@ -37,7 +38,13 @@ const NavbarApp = () => {
           </Nav>
 
           <Nav className='ms-auto'>
-            <Nav.Link as={Link} to={"/adminlogin"}>
+            <Nav.Link
+              onClick={() => {
+                const admin = getLoggedInAdmin();
+                if (admin) navigate("/adminselection", { state: { admin } });
+                else navigate("/adminlogin");
+              }}
+            >
               <Button className='btn btn-outline-light nav-button bg-green'>Tạo sự kiện</Button>
             </Nav.Link>
             <Nav.Link as={Link} to={"/contact"}>
