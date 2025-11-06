@@ -19,6 +19,12 @@ const AdminSelectionPage = ({ admin, onSelect }) => {
         if (!admin) navigate("/adminlogin");
     }, [admin, navigate]);
 
+    const handleLogout = () => {
+        localStorage.removeItem("admin");
+        navigate("/adminlogin");
+    };
+
+
     return (
         <Container
             fluid
@@ -42,6 +48,16 @@ const AdminSelectionPage = ({ admin, onSelect }) => {
                     </Button>
                 </Col>
             </Row>
+            <div className="d-flex justify-content-center">
+                <Button
+                    className="mt-5 px-4 py-2 btn-login"
+                    onClick={handleLogout}
+                >
+                    Đăng xuất
+                </Button>
+            </div>
+
+
         </Container>
     );
 };
