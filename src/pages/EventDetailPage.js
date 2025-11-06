@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "../css/eventDetail.css";
 import IntroCard from "../components/IntroCard"
+import ReviewFrom from "../components/ReviewForm";
 const EventDetailPage = () => {
   const { id } = useParams();
   const [event, setEvent] = useState(null);
@@ -54,8 +55,12 @@ const EventDetailPage = () => {
         </aside>
       </div>
 
-      {/* Mô tả */}
-      <IntroCard title={event.title} description={event.description} />
+      <div className="container mt-5">
+
+        <IntroCard title={event.title} description={event.description} />
+
+        <ReviewFrom eventId={id} />
+      </div>
     </div>
   );
 };
