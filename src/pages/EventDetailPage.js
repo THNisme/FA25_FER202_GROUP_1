@@ -60,11 +60,13 @@ const EventDetailPage = () => {
     <div className="col-lg-8">
       <IntroCard title={event.title} description={event.description} />
     </div>
-
     <div className="col-lg-4">
-      <ReviewBox eventId={id} />
+     
     </div>
   </div>
+  <div className="col-lg-8">
+      <ReviewBox eventId={id} />
+    </div>
 </div>
     </div>
   );
