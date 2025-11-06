@@ -55,17 +55,12 @@ const EventDetailPage = () => {
         </aside>
       </div>
 
-<div className="container mt-5">
-  <div className="row gx-4">
-    <div className="col-lg-8">
-      <IntroCard title={event.title} description={event.description} />
-    </div>
+      <div className="container mt-5">
 
-    <div className="col-lg-4">
-      <ReviewFrom eventId={id} />
-    </div>
-  </div>
-</div>
+        <IntroCard title={event.title} description={event.description} />
+
+        <ReviewFrom eventId={id} />
+      </div>
     </div>
   );
 };

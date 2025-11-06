@@ -56,7 +56,7 @@ const ReviewBox = ({ eventId }) => {
         </Alert>
       )}
 
-      <Form onSubmit={handleSubmit} className="mb-4">
+      <Form onSubmit={handleSubmit} className="mb-4 text-dark">
         <Form.Group className="mb-3">
           <Form.Label>Email</Form.Label>
           <Form.Control
