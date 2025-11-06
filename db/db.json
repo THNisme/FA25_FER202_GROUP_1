@@ -86,7 +86,16 @@
       "category": "Lễ hội",
       "description": "A beautiful cultural performance showing the history of Hội An.",
       "image": "assets/images/anh1.jpg",
-      "price": 200000
+      "price": 200000,
+      "reviews": [
+        {
+          "id": 1,
+          "email": "nghiath.ce191115@gmail.com",
+          "rating": 5,
+          "comment": "test dev",
+          "date": "2025-11-06T11:01:30.694Z"
+        }
+      ]
     },
     {
       "id": "3",

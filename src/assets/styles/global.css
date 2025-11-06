@@ -41,6 +41,7 @@ body {
   transition: all ease-in-out .3s;
 }
 
+.navbar-brand:focus,
 .nav-brand-text:hover {
   color: var(--white-color);
   cursor: pointer;
