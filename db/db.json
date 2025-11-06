@@ -6,18 +6,62 @@
       "category": "Mùa Đông",
       "description": "A joyful Christmas concert with live performances from F-Active.",
       "image": "assets/images/anh1.jpg",
-      "price": 10000
+      "price": 10000,
+      "reviews": [
+        {
+          "id": 1,
+          "email": "b@gmail.com",
+          "rating": 4.5,
+          "comment": "Tổ chức khá tốt, đường chạy đẹp.",
+          "date": "2025-11-05T10:00:00Z"
+        },
+        {
+          "id": 2,
+          "email": "c@gmail.com",
+          "rating": 5,
+          "comment": "Rất vui và chuyên nghiệp!",
+          "date": "2025-11-05T11:30:00Z"
+        },
+        {
+          "id": 3,
+          "email": "kiettran20082005@gmail.com",
+          "rating": 5,
+          "comment": "123",
+          "date": "2025-11-05T14:20:57.353Z"
+        },
+        {
+          "id": 4,
+          "email": "cawjeh@imail.edu.vn",
+          "rating": 1,
+          "comment": "123",
+          "date": "2025-11-05T14:21:31.836Z"
+        },
+        {
+          "id": 5,
+          "email": "kiettran20082005@gmail.com",
+          "rating": 5,
+          "comment": "123",
+          "date": "2025-11-05T14:24:45.345Z"
+        },
+        {
+          "id": 6,
+          "email": "kiettt.ce190871@gmail.com",
+          "rating": 5,
+          "comment": "123455",
+          "date": "2025-11-06T02:39:02.753Z"
+        }
+      ]
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Ký Ức Hội An - Hoi An Memories Show",
       "category": "Lễ hội",
       "description": "A beautiful cultural performance showing the history of Hội An.",
-       "image": "assets/images/anh1.jpg",
+      "image": "assets/images/anh1.jpg",
       "price": 200000
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "The Alma Show [Tinh Hoa Việt Nam]",
       "category": "Chương trình",
       "description": "An amazing water puppet and magic show celebrating Vietnamese culture.",
@@ -25,31 +69,31 @@
       "price": 600000
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Art Workshop: Painting with ",
       "category": "Workshop",
       "description": "Learn the art of painting with watercolors in a fun and creative workshop.",
-       "image": "assets/images/anh1.jpg",
+      "image": "assets/images/anh1.jpg",
       "price": 370000
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Terrarium Cake Workshop",
       "category": "Workshop",
       "description": "A unique workshop where you make your own terrarium cake.",
-       "image": "assets/images/anh1.jpg",
+      "image": "assets/images/anh1.jpg",
       "price": 390000
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Trải Nghiệm KidZania Hà Nội",
       "category": "Trải nghiệm",
       "description": "An exciting and educational experience for kids at KidZania in Hanoi.",
-       "image": "assets/images/anh1.jpg",
+      "image": "assets/images/anh1.jpg",
       "price": 50000
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Trải Nghiệm Làm Gốm",
       "category": "Workshop",
       "description": "Learn the traditional art of pottery making in this hands-on workshop.",
@@ -57,11 +101,11 @@
       "price": 400000
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Triển Lãm Di Sản Phật Giáo",
       "category": "Triển lãm",
       "description": "Explore the rich heritage of Buddhism through an exquisite art exhibition.",
-       "image": "assets/images/anh1.jpg",
+      "image": "assets/images/anh1.jpg",
       "price": 150000
     }
   ],
