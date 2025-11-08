@@ -14,52 +14,60 @@ const EventDetailPage = () => {
       .catch((err) => console.error("Error:", err));
   }, [id]);
 
-  if (!event) return <p className="loading">Đang tải...</p>;
+  if (!event) return <p className="loading text-center my-5">Đang tải thông tin sự kiện...</p>;
 
   return (
-    <div className="event-detail">
-      <div className="event-header">
-        {/* Ảnh bên trái */}
-        <div className="event-media">
-          <img src={`/${event.image}`} alt={event.title} className="event-img" />
+    <div className="container">
+      <div className=" event-detail">
+        <div className="event-header ">
+          {/* Ảnh bên trái */}
+          <div className="event-media">
+            <img src={
+              event.image?.startsWith("http://") || event.image?.startsWith("https://")
+                ? event.image
+                : `/${event.image}`
+            }
+              alt={event.title}
+              className="event-img" />
+          </div>
+
+          {/* Panel bên phải */}
+          <aside className="event-info-box">
+            {/* TOP: Title + Category */}
+            <div className="info-top">
+              <h1 className="eventdetail-title">{event.title}</h1>
+              <div className="event-meta">
+                <span className="meta-icon" aria-hidden>
+                  Thể Loại:
+                </span>
+                <span className="meta-text">{event.category}</span>
+              </div>
+            </div>
+
+            {/* LINE TRẮNG TO */}
+            <hr className="price-divider" />
+
+            {/* BOTTOM: Price */}
+            <div className="info-bottom">
+              <div className="event-price-row">
+                <span className="price-label">Phí Tham Gia</span>
+                <span className="price-value">
+                  {(event.price || 0).toLocaleString("vi-VN")} đ
+                </span>
+                <span className="price-chevron" aria-hidden>
+                  ›
+                </span>
+              </div>
+            </div>
+          </aside>
         </div>
 
-        {/* Panel bên phải */}
-        <aside className="event-info-box">
-          {/* TOP: Title + Category */}
-          <div className="info-top">
-            <h1 className="eventdetail-title">{event.title}</h1>
-            <div className="event-meta">
-              <span className="meta-icon" aria-hidden>
-                Thể Loại:
-              </span>
-              <span className="meta-text">{event.category}</span>
-            </div>
-          </div>
+        <div className="my-5 w-100">
+          <IntroCard title={event.title} description={event.description} />
 
-          {/* LINE TRẮNG TO */}
-          <hr className="price-divider" />
+          <ReviewFrom eventId={id} />
+        </div>
 
-          {/* BOTTOM: Price */}
-          <div className="info-bottom">
-            <div className="event-price-row">
-              <span className="price-label">Phí Tham Gia</span>
-              <span className="price-value">
-                {(event.price || 0).toLocaleString("vi-VN")} đ
-              </span>
-              <span className="price-chevron" aria-hidden>
-                ›
-              </span>
-            </div>
-          </div>
-        </aside>
-      </div>
-
-      <div className="container mt-5">
-
-        <IntroCard title={event.title} description={event.description} />
-
-        <ReviewFrom eventId={id} />
       </div>
     </div>
   );
