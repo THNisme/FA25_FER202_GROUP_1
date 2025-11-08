@@ -28,19 +28,17 @@ function App() {
       <div className="app-container">
         <Navbar />
 
-        <main className="main-content">
-          <Suspense fallback={<div className="text-center" style={{ marginTop: "5rem" }}>Loading...</div>}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/searchbar" element={<SearchBar />} />
-              <Route path="/event/:id" element={<EventDetailPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/messages" element={<MessageListPage />} />
-              <Route path="/messages/:id" element={<MessageDetailPage />} />
-              <Route path="/eventform" element={<EventFormPage />} />
-            </Routes>
-          </Suspense>
-        </main>
+        <Suspense fallback={<div className="text-center fs-5" style={{ margin: "5rem 0", color: "#2dc275" }}>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/searchbar" element={<SearchBar />} />
+            <Route path="/event/:id" element={<EventDetailPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/messages" element={<MessageListPage />} />
+            <Route path="/messages/:id" element={<MessageDetailPage />} />
+            <Route path="/eventform" element={<EventFormPage />} />
+          </Routes>
+        </Suspense>
 
         <Footer />
       </div>
