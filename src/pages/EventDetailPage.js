@@ -14,7 +14,7 @@ const EventDetailPage = () => {
       .catch((err) => console.error("Error:", err));
   }, [id]);
 
-  if (!event) return <p className="loading">Đang tải...</p>;
+  if (!event) return <p className="loading text-center my-5">Đang tải thông tin sự kiện...</p>;
 
   return (
     <div className="container">

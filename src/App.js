@@ -37,6 +37,7 @@ function App() {
             <Route path="/messages" element={<MessageListPage />} />
             <Route path="/messages/:id" element={<MessageDetailPage />} />
             <Route path="/eventform" element={<EventFormPage />} />
+            <Route path="/eventform/:id/:action" element={<EventFormPage />} />
           </Routes>
         </Suspense>
 
