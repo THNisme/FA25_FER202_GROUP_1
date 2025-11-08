@@ -31,6 +31,7 @@ const EventFormPage = () => {
       console.error(error);
     }
   };
+
   const newIncreaseID = () => {
     if (!eventList || eventList.length === 0) return 1; // nếu chưa có sự kiện nào
 
@@ -110,13 +111,11 @@ const EventFormPage = () => {
 
 
 
-
-
   return (
     <div className="container my-5">
       <h3 className="text-center mb-3 fw-bold">{isEdit ? `Cập nhật sự kiện: ${event.title}` : "Tạo sự kiện"}</h3>
       <div className="event-form-wrapper">
-        <Form onSubmit={handleSubmit} encType="multipart/form-data">
+        <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3">
             <Form.Label>Tên sự kiện</Form.Label>
             <Form.Control
@@ -146,14 +145,19 @@ const EventFormPage = () => {
           </Form.Group>
 
           <Form.Group className="mb-3">
-            <Form.Label>Danh mục</Form.Label>
-            <Form.Control
-              type="text"
+            <Form.Label>Danh mục sự kiện</Form.Label>
+            <Form.Select type="text"
               placeholder="Nhập danh mục"
               value={event.category}
               onChange={(e) => setEvent({ ...event, category: e.target.value })}
               required
-            />
+            >
+              <option value="">--Chọn danh mục--</option>
+              <option value="Nhạc sống">Nhạc sống</option>
+              <option value="Sân khấu & Nghệ thuật">Sân khấu & Nghệ thuật</option>
+              <option value="Thể thao">Thể thao</option>
+              <option value="Khác">Khác</option>
+            </Form.Select>
           </Form.Group>
 
           <Form.Group className="mb-3">
