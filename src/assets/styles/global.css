@@ -32,6 +32,11 @@ body {
   padding-right: 1.2rem;
 }
 
+.green-btn {
+  background-color: var(--primary-color);
+  border: #2dc275;
+}
+
 /* STYLE NAVBAR */
 
 .nav-brand-text {
@@ -110,4 +115,13 @@ body {
 
 .footer-map iframe {
   border-radius: 8px;
+}
+
+.event-form-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.event-form-wrapper form {
+  width: 900px;
 }

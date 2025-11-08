@@ -21,7 +21,13 @@ const EventDetailPage = () => {
       <div className="event-header">
         {/* Ảnh bên trái */}
         <div className="event-media">
-          <img src={`/${event.image}`} alt={event.title} className="event-img" />
+          <img src={
+            event.image?.startsWith("http://") || event.image?.startsWith("https://")
+              ? event.image
+              : `/${event.image}`
+          }
+            alt={event.title}
+            className="event-img" />
         </div>
 
         {/* Panel bên phải */}
