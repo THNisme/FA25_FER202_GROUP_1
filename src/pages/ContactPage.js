@@ -18,7 +18,7 @@ const ContactPage = () => {
             Thông tin liên hệ
           </h2>
           <p style={{ fontSize: "1.1rem", marginBottom: "10px" }}>
-            <strong>Câu Lạc Bộ Sự kiện F-Active</strong>
+            <img src="/assets/images/loading-logo.png" className="logo-loading-img" style={{ width: "40px" }}></img> <strong>Câu Lạc Bộ Sự kiện F-Active</strong>
           </p>
 
           <div style={{ lineHeight: "1.8", fontSize: "1rem" }}>
@@ -57,6 +57,8 @@ const ContactPage = () => {
               phá và tham gia những hoạt động bùng nổ cùng{" "}
               <strong>F-Active!</strong>
             </p>
+            <img src="/assets/images/FAC-logo-text-b.png" width={"50%"} className="d-flex m-auto"></img>
+
           </div>
         </Col>
 

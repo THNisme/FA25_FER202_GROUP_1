@@ -17,20 +17,29 @@ import "./App.css"; // style riêng cho App
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const MessageListPage = lazy(() => import('./pages/MessageListPage'));
 const MessageDetailPage = lazy(() => import('./pages/MessageDetailPage'));
-const HomePage = lazy(() => import('./pages/HomePage'));
+const HomePage = lazy(() => delayImport(() => import('./pages/HomePage')));
 const EventDetailPage = lazy(() => import('./pages/EventDetailPage'));
 const EventFormPage = lazy(() => import('./pages/EventFormPage'));
 const AdminSelectionPage = lazy(() => import('./pages/AdminSelection'));
 const AdminLoginPage = lazy(() => import('./pages/AdminLoginPage '));
 
+function delayImport(fn, ms = 3500) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(fn());
+    }, ms);
+  });
+}
 
 function App() {
   return (
     <Router>
       <div className="app-container">
         <Navbar />
-
-        <Suspense fallback={<div className="text-center fs-5" style={{ margin: "5rem 0", color: "#2dc275" }}>Loading...</div>}>
+        {/* <div className="text-center fs-5" style={{ margin: "5rem 0", color: "#2dc275" }}>Loading...</div> */}
+        <Suspense fallback={<div class="d-flex m-auto">
+          <img src="/assets/images/loading-logo.png" alt="Logo" className="logo-loading-img" />
+        </div>}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/searchbar" element={<SearchBar />} />
