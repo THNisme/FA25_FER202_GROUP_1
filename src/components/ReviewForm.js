@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { addReviewToEvent } from "../api/reviewFormApi";
 import { Form, Button, Alert } from "react-bootstrap";
-
+// Thêm lại file này bị xóa
 const ReviewBox = ({ eventId }) => {
   const [formData, setFormData] = useState({
     email: "",
