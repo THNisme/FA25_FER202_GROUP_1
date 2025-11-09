@@ -43,7 +43,9 @@ const ReviewBox = ({ eventId }) => {
 
   return (
     <div className="review-box p-4 bg-light rounded shadow-sm mt-5">
-      <h3 className="mb-3 text-success">Đánh giá sự kiện</h3>
+      <h3 className="mb-3" style={{ color: "var(--primary-color)" }}>
+        Đánh giá sự kiện
+      </h3>
 
       {alert && (
         <Alert
