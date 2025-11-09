@@ -94,6 +94,48 @@
           "rating": 5,
           "comment": "test dev",
           "date": "2025-11-06T11:01:30.694Z"
+        },
+        {
+          "id": 2,
+          "email": "nghiath.ce191115@gmail.com",
+          "rating": 2,
+          "comment": "tesst",
+          "date": "2025-11-09T13:27:17.340Z"
+        },
+        {
+          "id": 3,
+          "email": "nghiath.ce191115@gmail.com",
+          "rating": 3,
+          "comment": "ấdasd",
+          "date": "2025-11-09T13:27:37.871Z"
+        },
+        {
+          "id": 4,
+          "email": "nghiath.ce191115@gmail.com",
+          "rating": 3,
+          "comment": "ahahahhahaha",
+          "date": "2025-11-09T16:24:05.026Z"
+        },
+        {
+          "id": 5,
+          "email": "nghiath.ce191115@gmail.com",
+          "rating": 4,
+          "comment": "retry",
+          "date": "2025-11-09T16:26:09.295Z"
+        },
+        {
+          "id": 6,
+          "email": "nghiath.ce191115@gmail.com",
+          "rating": 1,
+          "comment": "newest review",
+          "date": "2025-11-09T16:27:38.537Z"
+        },
+        {
+          "id": 7,
+          "email": "nghiath.ce191115@gmail.com",
+          "rating": 3,
+          "comment": "123456",
+          "date": "2025-11-09T16:32:58.347Z"
         }
       ]
     },
@@ -127,7 +169,30 @@
       "category": "Trải nghiệm",
       "description": "An exciting and educational experience for kids at KidZania in Hanoi.",
       "image": "assets/images/anh1.jpg",
-      "price": 50000
+      "price": 50000,
+      "reviews": [
+        {
+          "id": 1,
+          "email": "nghiath.ce191115@gmail.com",
+          "rating": 5,
+          "comment": "ok",
+          "date": "2025-11-09T16:40:45.223Z"
+        },
+        {
+          "id": 2,
+          "email": "nghiath.ce191115@gmail.com",
+          "rating": 3,
+          "comment": "abcv",
+          "date": "2025-11-09T16:40:53.918Z"
+        },
+        {
+          "id": 3,
+          "email": "nghiath.ce191115@gmail.com",
+          "rating": 4,
+          "comment": "kkk",
+          "date": "2025-11-09T16:41:07.157Z"
+        }
+      ]
     },
     {
       "id": "7",
@@ -176,7 +241,23 @@
       "category": "Workshop",
       "description": "<p style=\"text-align: center;\"><span style='color: rgb(0, 0, 0); font-family: \"Open Sans\", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;' data-pasted=\"true\"><strong>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</strong></span></p><p><span style='color: rgb(0, 0, 0); font-family: \"Open Sans\", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'><em>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</em></span></p><ul><li style=\"font-style: italic;\"><span style='color: rgb(0, 0, 0); font-family: \"Open Sans\", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>Neque porro quisquam est, qui dolorem ipsum</span></li></ul><ol><li><span style='color: rgb(0, 0, 0); font-family: \"Open Sans\", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>quia dolor sit amet</span></li><li><span style='color: rgb(0, 0, 0); font-family: \"Open Sans\", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>consectetur</span></li><li><span style='color: rgb(0, 0, 0); font-family: \"Open Sans\", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>adipisci velit</span></li></ol><ul><li><span style='color: rgb(0, 0, 0); font-family: \"Open Sans\", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</span></li><li><span style='color: rgb(0, 0, 0); font-family: \"Open Sans\", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>LINK:&nbsp;&nbsp;<a href=\"https://github.com/THNisme/FA25_FER202_GROUP_1\" target=\"_blank\" rel=\"noopener noreferrer\">#ASSIGMENT_REPO</a></span></li></ul><p><span style='color: rgb(0, 0, 0); font-family: \"Open Sans\", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</span></p><p><br></p><p><img src=\"https://picsum.photos/1280/720?random=1\" style=\"width: 775px;\" class=\"fr-fic fr-dib\"></p><p><br></p><p style=\"text-align: justify;\"><span style='color: rgb(0, 0, 0); font-family: \"Open Sans\", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;' data-pasted=\"true\"><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</strong></span></p><p style=\"text-align: justify;\"><span style='color: rgb(0, 0, 0); font-family: \"Open Sans\", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p><p><span contenteditable=\"false\" draggable=\"true\" class=\"fr-video fr-deletable fr-fvc fr-dvb fr-draggable\"><iframe src=\"https://www.youtube.com/embed/944Q6ErwVm4?&list=RD944Q6ErwVm4&start_radio=1&pp=ygUWaMOgbmggdHLDrG5oIGPhu6dhIGzDoaAHAQ%3D%3D&wmode=opaque&rel=0\" frameborder=\"0\" allowfullscreen=\"\" class=\"fr-draggable\" style=\"width: 748px; height: 419px;\"></iframe></span><br></p>",
       "price": "0",
-      "image": "assets/images/event-img.png"
+      "image": "assets/images/event-img.png",
+      "reviews": [
+        {
+          "id": 1,
+          "email": "nghiath.ce191115@gmail.com",
+          "rating": 4,
+          "comment": "nice\n",
+          "date": "2025-11-09T16:39:43.054Z"
+        },
+        {
+          "id": 2,
+          "email": "nghiath.ce191115@gmail.com",
+          "rating": 3,
+          "comment": "common",
+          "date": "2025-11-09T16:39:54.458Z"
+        }
+      ]
     },
     {
       "id": "12",
@@ -202,6 +283,14 @@
           "date": "2025-11-08T17:45:31.232Z"
         }
       ]
+    },
+    {
+      "id": "14",
+      "title": "Quơ Tour Mắt Thấy Tai Nghe Updated",
+      "category": "Khác",
+      "description": "<p style=\"text-align: center;\"><span style='color: rgb(0, 0, 0); font-family: \"Open Sans\", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;' data-pasted=\"true\"><strong>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</strong></span></p><p><span style='color: rgb(0, 0, 0); font-family: \"Open Sans\", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'><em>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</em></span></p><ul><li style=\"font-style: italic;\"><span style='color: rgb(0, 0, 0); font-family: \"Open Sans\", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>Neque porro quisquam est, qui dolorem ipsum</span></li></ul><ol><li><span style='color: rgb(0, 0, 0); font-family: \"Open Sans\", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>quia dolor sit amet</span></li><li><span style='color: rgb(0, 0, 0); font-family: \"Open Sans\", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>consectetur</span></li><li><span style='color: rgb(0, 0, 0); font-family: \"Open Sans\", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>adipisci velit</span></li></ol><ul><li><span style='color: rgb(0, 0, 0); font-family: \"Open Sans\", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</span></li><li><span style='color: rgb(0, 0, 0); font-family: \"Open Sans\", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>LINK: &nbsp;<a href=\"https://github.com/THNisme/FA25_FER202_GROUP_1\" target=\"_blank\" rel=\"noopener noreferrer\">#ASSIGMENT_REPO</a></span></li></ul><p><span style='color: rgb(0, 0, 0); font-family: \"Open Sans\", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</span></p><p><img src=\"https://picsum.photos/1280/720?random=1\" style=\"width: 858px;\" class=\"fr-fic fr-dib\"></p><p style=\"text-align: justify;\"><span style='color: rgb(0, 0, 0); font-family: \"Open Sans\", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;' data-pasted=\"true\"><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</strong></span></p><p style=\"text-align: justify;\"><span style='color: rgb(0, 0, 0); font-family: \"Open Sans\", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p><p><span contenteditable=\"false\" draggable=\"true\" class=\"fr-video fr-deletable fr-fvc fr-dvb fr-draggable\"><iframe src=\"https://www.youtube.com/embed/944Q6ErwVm4?&list=RD944Q6ErwVm4&start_radio=1&pp=ygUWaMOgbmggdHLDrG5oIGPhu6dhIGzDoaAHAQ%3D%3D&wmode=opaque&rel=0\" frameborder=\"0\" allowfullscreen=\"\" class=\"fr-draggable\" style=\"width: 859px; height: 470px;\"></iframe></span><br></p>",
+      "image": "assets/images/event-img.png",
+      "price": 99000
     }
   ],
   "messages": [
@@ -243,6 +332,14 @@
       "email": "kiettt.ce190871@gmail.com",
       "phone": "0786963526",
       "content": "asdfghjkl",
+      "status": "read"
+    },
+    {
+      "id": "6",
+      "name": "Nguyễn Thị Kiều My",
+      "email": "nghiath.ce191115@gmail.com",
+      "phone": "0786963526",
+      "content": "tesrtttt",
       "status": "unread"
     }
   ],

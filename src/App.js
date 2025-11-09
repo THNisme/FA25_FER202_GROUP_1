@@ -20,6 +20,8 @@ const MessageDetailPage = lazy(() => import('./pages/MessageDetailPage'));
 const HomePage = lazy(() => import('./pages/HomePage'));
 const EventDetailPage = lazy(() => import('./pages/EventDetailPage'));
 const EventFormPage = lazy(() => import('./pages/EventFormPage'));
+const AdminSelectionPage = lazy(() => import('./pages/AdminSelection'));
+const AdminLoginPage = lazy(() => import('./pages/AdminLoginPage '));
 
 
 function App() {
@@ -36,14 +38,16 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/messages" element={<MessageListPage />} />
             <Route path="/messages/:id" element={<MessageDetailPage />} />
+            <Route path="/adminlogin" element={<AdminLoginPage />} />
+            <Route path="/adminselection" element={<AdminSelectionPage />} />
             <Route path="/eventform" element={<EventFormPage />} />
             <Route path="/eventform/:id/:action" element={<EventFormPage />} />
-          </Routes>
-        </Suspense>
+          </Routes >
+        </Suspense >
 
         <Footer />
-      </div>
-    </Router>
+      </div >
+    </Router >
   );
 }
 
