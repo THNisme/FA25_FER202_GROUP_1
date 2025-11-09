@@ -2,7 +2,8 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "../css/eventDetail.css";
 import IntroCard from "../components/IntroCard";
-import ReviewFrom from "../components/ReviewForm";
+import ReviewForm from "../components/ReviewForm";
+import ReviewBox from "../components/ReviewBox";
 import MessageBox from "../components/MessageBox";
 const EventDetailPage = () => {
   const { id } = useParams();
@@ -30,7 +31,7 @@ const EventDetailPage = () => {
             <img
               src={
                 event.image?.startsWith("http://") ||
-                event.image?.startsWith("https://")
+                  event.image?.startsWith("https://")
                   ? event.image
                   : `/${event.image}`
               }
@@ -70,14 +71,12 @@ const EventDetailPage = () => {
           </aside>
         </div>
 
-        <div className="my-5 w-100">
+        <div className="w-100">
           <IntroCard title={event.title} description={event.description} />
           <ReviewBox eventId={id} reload={reload} />
           <ReviewForm eventId={id} onReviewAdded={() => setReload(!reload)} />
+          <MessageBox />
         </div>
-      </div>
-      <div className="container my-5">
-        <MessageBox />
       </div>
     </div>
   );

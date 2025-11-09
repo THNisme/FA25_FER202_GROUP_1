@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className='footer-block'>
+    <footer className='footer-block d-flex flex-column mt-auto'>
       <Container>
         <Row>
           <Col>

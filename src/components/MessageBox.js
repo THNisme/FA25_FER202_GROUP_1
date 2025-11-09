@@ -64,7 +64,7 @@ const MessageBox = () => {
   };
 
   return (
-    <div className="message-box p-4 rounded shadow-sm bg-light">
+    <div className="message-box p-4 rounded shadow-sm bg-light text-dark my-5">
       <h3 className="mb-3" style={{ color: "var(--primary-color)" }}>
         Liên hệ với chúng tôi
       </h3>
