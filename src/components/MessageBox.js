@@ -29,10 +29,9 @@ const MessageBox = () => {
       return { type: "danger", message: "Email không hợp lệ." };
     }
 
-
     const phoneRegex = /^(0|\+84)(3|5|7|8|9)[0-9]{8}$/;
     if (phone.trim() && !phoneRegex.test(phone.trim())) {
-      return { type: "danger", message: "Số điện thoại không hợp lệ (phải là số Việt Nam)." };
+      return { type: "danger", message: "Số điện thoại không hợp lệ." };
     }
 
     if (!content.trim()) {
@@ -53,7 +52,11 @@ const MessageBox = () => {
 
     try {
       await sendMessage({ ...formData, status: "unread" });
-      setAlert({ type: "success", message: "🎉 Gửi tin nhắn thành công! Chúng tôi sẽ phản hồi sớm nhất có thể! Trân Trọng!" });
+      setAlert({
+        type: "success",
+        message:
+          "🎉 Gửi tin nhắn thành công! Chúng tôi sẽ phản hồi sớm nhất có thể! Trân Trọng!",
+      });
       setFormData({ name: "", email: "", phone: "", content: "" });
     } catch (err) {
       setAlert({ type: "danger", message: "Gửi thất bại, vui lòng thử lại!" });
@@ -62,7 +65,9 @@ const MessageBox = () => {
 
   return (
     <div className="message-box p-4 rounded shadow-sm bg-light">
-      <h3 className="mb-3 text-success">Liên hệ với chúng tôi</h3>
+      <h3 className="mb-3" style={{ color: "var(--primary-color)" }}>
+        Liên hệ với chúng tôi
+      </h3>
 
       {alert && (
         <Alert
@@ -107,8 +112,7 @@ const MessageBox = () => {
             value={formData.phone}
             onChange={handleChange}
           />
-          <Form.Text className="text-muted">
-          </Form.Text>
+          <Form.Text className="text-muted"></Form.Text>
         </Form.Group>
 
         <Form.Group className="mb-3">

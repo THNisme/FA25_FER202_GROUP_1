@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "../css/eventDetail.css";
-import IntroCard from "../components/IntroCard"
-import ReviewBox from "../components/ReviewBox";
-import ReviewForm from "../components/ReviewForm";
+import IntroCard from "../components/IntroCard";
+import ReviewFrom from "../components/ReviewForm";
+import MessageBox from "../components/MessageBox";
 const EventDetailPage = () => {
   const { id } = useParams();
   const [event, setEvent] = useState(null);
@@ -16,7 +16,10 @@ const EventDetailPage = () => {
       .catch((err) => console.error("Error:", err));
   }, [id]);
 
-  if (!event) return <p className="loading text-center my-5">Đang tải thông tin sự kiện...</p>;
+  if (!event)
+    return (
+      <p className="loading text-center my-5">Đang tải thông tin sự kiện...</p>
+    );
 
   return (
     <div className="container">
@@ -24,13 +27,16 @@ const EventDetailPage = () => {
         <div className="event-header ">
           {/* Ảnh bên trái */}
           <div className="event-media">
-            <img src={
-              event.image?.startsWith("http://") || event.image?.startsWith("https://")
-                ? event.image
-                : `/${event.image}`
-            }
+            <img
+              src={
+                event.image?.startsWith("http://") ||
+                event.image?.startsWith("https://")
+                  ? event.image
+                  : `/${event.image}`
+              }
               alt={event.title}
-              className="event-img" />
+              className="event-img"
+            />
           </div>
 
           {/* Panel bên phải */}
@@ -69,7 +75,9 @@ const EventDetailPage = () => {
           <ReviewBox eventId={id} reload={reload} />
           <ReviewForm eventId={id} onReviewAdded={() => setReload(!reload)} />
         </div>
-
+      </div>
+      <div className="container my-5">
+        <MessageBox />
       </div>
     </div>
   );
