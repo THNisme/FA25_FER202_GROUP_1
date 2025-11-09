@@ -21,8 +21,8 @@ export const sendMessage = async (messageData) => {
   const nextId =
     messages.length > 0
       ? (
-          Math.max(...messages.map((m) => Number(m.id) || 0)) + 1
-        ).toString()
+        Math.max(...messages.map((m) => Number(m.id) || 0)) + 1
+      ).toString()
       : "1";
 
   const newMessage = { id: nextId, ...messageData };
