@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { addReviewToEvent } from "../api/reviewFormApi";
 import { Form, Button, Alert } from "react-bootstrap";
-
-const ReviewBox = ({ eventId }) => {
+// Thêm lại file này bị xóa
+const ReviewForm = ({ eventId, onReviewAdded }) => {
   const [formData, setFormData] = useState({
     email: "",
     rating: 0,
@@ -35,6 +35,8 @@ const ReviewBox = ({ eventId }) => {
       });
       setAlert({ type: "success", message: "🎉 Cảm ơn bạn đã gửi đánh giá!" });
       setFormData({ email: "", rating: 0, comment: "" });
+
+      if (onReviewAdded) onReviewAdded();
     } catch (error) {
       console.error(error);
       setAlert({ type: "danger", message: "Không thể gửi đánh giá!" });
@@ -107,4 +109,4 @@ const ReviewBox = ({ eventId }) => {
   );
 };
 
-export default ReviewBox;
+export default ReviewForm;

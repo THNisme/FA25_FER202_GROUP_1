@@ -2,10 +2,12 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "../css/eventDetail.css";
 import IntroCard from "../components/IntroCard"
-import ReviewFrom from "../components/ReviewForm";
+import ReviewBox from "../components/ReviewBox";
+import ReviewForm from "../components/ReviewForm";
 const EventDetailPage = () => {
   const { id } = useParams();
   const [event, setEvent] = useState(null);
+  const [reload, setReload] = useState(false);
 
   useEffect(() => {
     fetch(`http://localhost:5000/events/${id}`)
@@ -64,8 +66,8 @@ const EventDetailPage = () => {
 
         <div className="my-5 w-100">
           <IntroCard title={event.title} description={event.description} />
-
-          <ReviewFrom eventId={id} />
+          <ReviewBox eventId={id} reload={reload} />
+          <ReviewForm eventId={id} onReviewAdded={() => setReload(!reload)} />
         </div>
 
       </div>
