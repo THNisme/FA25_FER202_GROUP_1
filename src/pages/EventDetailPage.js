@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import "../css/eventDetail.css";
 import IntroCard from "../components/IntroCard"
 import ReviewBox from "../components/ReviewBox";
+import ReviewForm from "../components/ReviewForm";
 const EventDetailPage = () => {
   const { id } = useParams();
   const [event, setEvent] = useState(null);
@@ -55,19 +56,22 @@ const EventDetailPage = () => {
         </aside>
       </div>
 
-<div className="container mt-5">
-  <div className="row gx-4">
-    <div className="col-lg-8">
-      <IntroCard title={event.title} description={event.description} />
-    </div>
-    <div className="col-lg-4">
-     
-    </div>
-  </div>
-  <div className="col-lg-8">
-      <ReviewBox eventId={id} />
-    </div>
-</div>
+      <div className="container mt-5">
+        <div className="row gx-4">
+          <div className="col-lg-8">
+            <IntroCard title={event.title} description={event.description} />
+          </div>
+        </div>
+        <div className="row gx-4 mt-5 mb-3">
+          <div className="col-lg-8">
+            <ReviewBox eventId={id} />
+          </div>
+          <div className="col-lg-4">
+            <ReviewForm eventId={id} />
+          </div>
+        </div>
+
+      </div>
     </div>
   );
 };

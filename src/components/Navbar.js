@@ -38,15 +38,14 @@ const NavbarApp = () => {
           </Nav>
 
           <Nav className='ms-auto'>
-            <Nav.Link>
-              <Button className='btn btn-outline-light nav-button bg-green'
-                onClick={() => {
-                  const admin = getLoggedInAdmin();
-                  if (admin) navigate("/adminselection", { state: { admin } });
-                  else navigate("/adminlogin");
-                }}
-              >Tạo sự kiện</Button>
-
+            <Nav.Link
+              onClick={() => {
+                const admin = getLoggedInAdmin();
+                if (admin) navigate("/adminselection", { state: { admin } });
+                else navigate("/adminlogin");
+              }}
+            >
+              <Button className='btn btn-outline-light nav-button bg-green'>Tạo sự kiện</Button>
             </Nav.Link>
             <Nav.Link as={Link} to={"/contact"}>
               <Button className='btn btn-outline-light nav-button bg-green'>

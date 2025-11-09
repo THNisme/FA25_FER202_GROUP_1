@@ -21,7 +21,7 @@ function EventCard({ events }) {
 
           <div className="event-info">
             <h3 className="event-title">{event.title}</h3>
-            <p className="event-price">Từ {event.price}</p>
+            <p className="event-price">Phí tham gia từ {(event.price || 0).toLocaleString("vi-VN")} ₫</p>
             <p className="event-category">Thể Loại: {event.category}</p>
           </div>
         </Link>
