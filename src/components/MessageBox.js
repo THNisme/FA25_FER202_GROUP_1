@@ -32,7 +32,7 @@ const MessageBox = () => {
 
     const phoneRegex = /^(0|\+84)(3|5|7|8|9)[0-9]{8}$/;
     if (phone.trim() && !phoneRegex.test(phone.trim())) {
-      return { type: "danger", message: "Số điện thoại không hợp lệ (phải là số Việt Nam)." };
+      return { type: "danger", message: "Số điện thoại không hợp lệ." };
     }
 
     if (!content.trim()) {
