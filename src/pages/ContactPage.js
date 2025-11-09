@@ -13,11 +13,12 @@ const ContactPage = () => {
               color: "var(--primary-color)",
               marginBottom: "20px",
             }}
+            className="mt-5 py-4"
           >
             Thông tin liên hệ
           </h2>
           <p style={{ fontSize: "1.1rem", marginBottom: "10px" }}>
-            <strong>CLB Sự kiện F-Active</strong>
+            <strong>Câu Lạc Bộ Sự kiện F-Active</strong>
           </p>
 
           <div style={{ lineHeight: "1.8", fontSize: "1rem" }}>
