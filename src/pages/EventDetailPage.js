@@ -62,6 +62,8 @@ const EventDetailPage = () => {
             <IntroCard title={event.title} description={event.description} />
           </div>
         </div>
+
+        {/*Form với Box review đây nè*/}
         <div className="row gx-4 mt-5 mb-3">
           <div className="col-lg-8">
             <ReviewBox eventId={id} />
