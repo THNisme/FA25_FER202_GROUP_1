@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getReviewsByEvent } from "../api/reviewBoxApi";
 import "../css/reviewbox.css";
-
+//Tách ra, hoàn trả lại như cũ
 export default function ReviewBox({ eventId }) {
   const [reviews, setReviews] = useState([]);
 
