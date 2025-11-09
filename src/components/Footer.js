@@ -42,7 +42,7 @@ const Footer = () => {
               <Col>
                 <ul className='footer-button-list'>
                   <li className='footer-button-item'>
-                    <Button as={Link} to={"/admin-path"} variant='outline-light' className='button-shape mb-3'>Tạo sự kiện</Button>
+                    <Button as={Link} to={"/adminselection"} variant='outline-light' className='button-shape mb-3'>Tạo sự kiện</Button>
                   </li>
                   <li className='footer-button-item'>
                     <Button as={Link} to={"/contact"} variant='outline-light' className='button-shape mb-3'>
