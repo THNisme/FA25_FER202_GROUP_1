@@ -14,6 +14,7 @@ const EventFormPage = () => {
     {
       id: "",
       title: "",
+      date: "",
       category: "Khác",
       description: "",
       image: null,
@@ -123,6 +124,16 @@ const EventFormPage = () => {
               placeholder="Nhập tên sự kiện"
               value={event.title}
               onChange={(e) => setEvent({ ...event, title: e.target.value })}
+              required
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3">
+            <Form.Label>Ngày tổ chức</Form.Label>
+            <Form.Control
+              type="date"
+              value={event.date}
+              onChange={(e) => setEvent({ ...event, date: e.target.value })}
               required
             />
           </Form.Group>

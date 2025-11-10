@@ -1,14 +1,6 @@
 {
   "events": [
     {
-      "id": "9",
-      "title": "Lễ Hội Ánh Sáng Hội An",
-      "category": "Lễ hội",
-      "description": "Immerse yourself in the magical night of lanterns along the ancient streets of Hội An.",
-      "image": "assets/images/anh1.jpg",
-      "price": 120000
-    },
-    {
       "id": "10",
       "title": "Hòa Nhạc Giao Hưởng Mùa Thu",
       "category": "Âm nhạc",

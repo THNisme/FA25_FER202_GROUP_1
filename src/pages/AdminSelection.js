@@ -35,21 +35,21 @@ const AdminSelectionPage = ({ admin, onSelect }) => {
 
       <Row className="w-100 justify-content-center">
         <Col xs="auto" className="mx-3">
-          <Button className="px-5 py-3 fw-bold text-white btn-login"
+          <Button variant="success" className="px-5 py-3 fw-bold text-white btn-login"
             onClick={() => navigate("/eventmanager")}>
             Quản lý sự kiện
           </Button>
         </Col>
 
         <Col xs="auto" className="mx-3">
-          <Button className="px-5 py-3 fw-bold text-white btn-login"
+          <Button variant="success" className="px-5 py-3 fw-bold text-white btn-login"
             onClick={() => navigate("/eventform")}>
             Tạo sự kiện
           </Button>
         </Col>
 
         <Col xs="auto" className="mx-3">
-          <Button className="px-5 py-3 fw-bold text-white btn-login"
+          <Button variant="success" className="px-5 py-3 fw-bold text-white btn-login"
             onClick={() => navigate("/messages")}>
             Quản lý Tin nhắn
           </Button>
@@ -57,6 +57,7 @@ const AdminSelectionPage = ({ admin, onSelect }) => {
       </Row>
       <div className="d-flex justify-content-center">
         <Button
+          variant="success"
           className="mt-5 px-4 py-2 btn-login"
           onClick={handleLogout}
         >
