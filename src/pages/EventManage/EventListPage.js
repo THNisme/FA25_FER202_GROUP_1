@@ -141,7 +141,7 @@ const EventListPage = () => {
                   </td>
                   <td className="text-center">{event.category}</td>
                   <td className="text-center">
-                    {event.price?.toLocaleString()} VND
+                    {event.price?.toLocaleString()} ₫
                   </td>
                   <td className="text-center">
                     <Button
@@ -151,7 +151,7 @@ const EventListPage = () => {
                         navigate(`/eventform/${event.id}/edit`)
                       }
                     >
-                       <i className="bi bi-pencil-square"></i>
+                      <i className="bi bi-pencil-square"></i>
                     </Button>
 
                     <Button
