@@ -21,7 +21,7 @@
       "title": "Workshop Nhiếp Ảnh Đường Phố",
       "category": "Workshop",
       "description": "Learn the art of street photography with professional photographers in Hà Nội.",
-      "image": "assets/images/anh1.jpg",
+      "image": "https://picsum.photos/1280/720?random=6",
       "price": 90000,
       "reviews": [
         {
@@ -38,7 +38,7 @@
       "title": "Triển Lãm Công Nghệ Tương Lai 2025",
       "category": "Triển lãm",
       "description": "Discover the latest innovations in AI, robotics, and smart devices shaping the future.",
-      "image": "assets/images/anh1.jpg",
+      "image": "https://picsum.photos/1280/720?random=5",
       "price": 200000
     },
     {
@@ -46,7 +46,7 @@
       "title": "Liên Hoan Phim Việt Nam",
       "category": "Phim ảnh",
       "description": "Celebrate the best of Vietnamese cinema with screenings, talks, and red carpet events.",
-      "image": "assets/images/anh1.jpg",
+      "image": "https://picsum.photos/1280/720?random=4",
       "price": 180000
     },
     {
@@ -54,19 +54,27 @@
       "title": "Giải Chạy Vì Môi Trường",
       "category": "Thể thao",
       "description": "Join thousands in a charity run to promote sustainability and green living.",
-      "image": "assets/images/anh1.jpg",
+      "image": "https://picsum.photos/1280/720?random=3",
       "price": 80000
+    },
+    {
+      "id": "15",
+      "title": "Giải Cầu Lông",
+      "category": "Thể thao",
+      "description": "Join thousands in a charity run to promote sustainability and green living.",
+      "image": "https://picsum.photos/1280/720?random=1",
+      "price": 80000
+    },
+    {
+      "id": "16",
+      "title": "Giải Chạy Vì FPT",
+      "category": "Thể thao",
+      "description": "Join thousands in a charity run to promote sustainability and green living.",
+      "image": "https://picsum.photos/1280/720?random=2",
+      "price": 99000
     }
   ],
   "messages": [
-    {
-      "id": "1",
-      "name": "kiệt",
-      "email": "kiettran20082005@gmail.com",
-      "phone": "0333099841",
-      "content": "em đã yêu một người có ước mơ, một người làm em thấy hoang mang lo sợ,sợ yêu một người không phải như em đã từng,...nếu như anh quay về phía đó, liệu anh có còn thấy em,..lệ trong đổi mắt sao mà lấp đi ánh nắng mặt tr,..",
-      "status": "unread"
-    },
     {
       "id": "3",
       "name": "kiệt",
@@ -98,16 +106,6 @@
       "createdAt": "2025-11-09T18:09:59.599Z"
     },
     {
-      "id": "5",
-      "receiverName": "kiệt",
-      "receiverEmail": "kiettran20082005@gmail.com",
-      "receiverPhone": "0333099841",
-      "content": "heheheheh",
-      "originalMessageId": "1",
-      "status": "unread",
-      "createdAt": "2025-11-09T19:13:20.254Z"
-    },
-    {
       "id": "6",
       "receiverName": "kiệt",
       "receiverEmail": "kiettran20082005@gmail.com",
@@ -116,16 +114,6 @@
       "originalMessageId": "1",
       "status": "unread",
       "createdAt": "2025-11-09T23:18:26.413Z"
-    },
-    {
-      "id": 7,
-      "receiverName": "kiệt",
-      "receiverEmail": "kiettran20082005@gmail.com",
-      "receiverPhone": "0333099841",
-      "content": "t đói quá",
-      "originalMessageId": "1",
-      "status": "unread",
-      "createdAt": "2025-11-10T01:14:41.969Z"
     }
   ],
   "admins": [

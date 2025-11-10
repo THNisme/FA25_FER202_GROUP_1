@@ -6,25 +6,33 @@ import { Suspense, lazy } from 'react';
 // Component chung
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import SearchBar from "./components/SearchBar";
 
 // Pages
-import ContactPage from "./pages/ContactPage";
-import MessageDetailPage from "./pages/MessageManage/MessageDetailPage";
-import MessageFormPage from "./pages/MessageManage/MessageFormPage";
-import HomePage from "./pages/HomePage";
-import SearchBar from "./components/SearchBar";
-import EventDetailPage from "./pages/EventDetailPage";
-import AdminSelectionPage from "./pages/AdminSelection";
-import AdminLoginPage from "./pages/AdminLoginPage ";
-import EventListPage from "./pages/EventManage/EventListPage";
-import EventFormPage from "./pages/EventFormPage";
-import MessageListPage from "./pages/MessageManage/MessageListPage";
-import MessageListADPage from "./pages/MessageManage/MessageListADPage";
-import MessageADPage from "./pages/MessageManage/MessageADPage";
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const MessageDetailPage = lazy(() => import('./pages/MessageManage/MessageDetailPage'));
+const MessageFormPage = lazy(() => import('./pages/MessageManage/MessageFormPage'));
+const HomePage = lazy(() => delayImport(() => import('./pages/HomePage')));
+const EventDetailPage = lazy(() => import('./pages/EventDetailPage'));
+const AdminSelectionPage = lazy(() => import('./pages/AdminSelection'));
+const AdminLoginPage = lazy(() => import('./pages/AdminLoginPage '));
+const EventListPage = lazy(() => import('./pages/EventManage/EventListPage'));
+const EventFormPage = lazy(() => import('./pages/EventFormPage'));
+const MessageListPage = lazy(() => import('./pages/MessageManage/MessageListPage'));
+const MessageListADPage = lazy(() => import('./pages/MessageManage/MessageListADPage'));
+const MessageADPage = lazy(() => import('./pages/MessageManage/MessageADPage'));
 
 // Styles
 import "./assets/styles/global.css";
 import "./App.css";
+
+function delayImport(fn, ms = 2000) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(fn());
+    }, ms);
+  });
+}
 
 function App() {
   return (
@@ -35,6 +43,7 @@ function App() {
         <Suspense fallback={<div class="d-flex m-auto">
           <img src="/assets/images/loading-logo.png" alt="Logo" className="logo-loading-img" />
         </div>}>
+
           <Routes>
             {/* Public */}
             <Route path="/" element={<HomePage />} />
