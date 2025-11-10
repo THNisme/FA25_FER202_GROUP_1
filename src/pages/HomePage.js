@@ -9,6 +9,13 @@ function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState('Tất cả');
 
   useEffect(() => {
+    document.body.style.backgroundColor = "#000";
+    return () => {
+      document.body.style.backgroundColor = ""; // reset khi rời trang
+    };
+  }, []);
+
+  useEffect(() => {
     const getEvents = async () => {
       const eventsData = await fetchEvents(selectedCategory);
       setEvents(eventsData);
@@ -22,12 +29,9 @@ function HomePage() {
   };
 
   return (
-    <div className="home-container">
-
-
-        {/* Events Grid */}
-        <EventCard events={events} />
-      </div>
+    <div className="container">
+      <EventCard events={events} />
+    </div>
 
   );
 }

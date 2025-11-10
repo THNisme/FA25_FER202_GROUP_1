@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { getReviewsByEvent } from "../api/reviewBoxApi";
 import "../css/reviewbox.css";
-
-export default function ReviewBox({ eventId }) {
+//Tách ra, hoàn trả lại như cũ
+export default function ReviewBox({ eventId, reload }) {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
@@ -11,15 +11,15 @@ export default function ReviewBox({ eventId }) {
       setReviews(data || []);
     };
     load();
-  }, [eventId]);
+  }, [eventId, reload]);
 
-  if (!reviews.length) return <p className="text">Chưa có đánh giá nào.</p>;
+  if (!reviews.length) return <p className="text-dark text-center fs-4 fw-bold mt-5">Chưa có đánh giá nào.</p>;
 
-  const avgRating = 
+  const avgRating =
     reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length;
 
   // Tỷ lệ sao
-  const starCount = [1,2,3,4,5].map(star => ({
+  const starCount = [1, 2, 3, 4, 5].map(star => ({
     star,
     percent: Math.round(
       (reviews.filter(r => Math.round(r.rating) === star).length / reviews.length) * 100
@@ -34,7 +34,7 @@ export default function ReviewBox({ eventId }) {
         {[...Array(full)].map((_, i) => (
           <i key={i} className="bi bi-star-fill text-warning"></i>
         ))}
-        {[...Array(5-full)].map((_, i) => (
+        {[...Array(5 - full)].map((_, i) => (
           <i key={i} className="bi bi-star text"></i>
         ))}
       </>
@@ -42,7 +42,7 @@ export default function ReviewBox({ eventId }) {
   };
 
   return (
-    <div className="review-box-container">
+    <div className="review-box-container mt-5 bg-light text-dark">
 
       {/* Tổng rating */}
       <div className="summary-box">
@@ -57,7 +57,7 @@ export default function ReviewBox({ eventId }) {
           <div key={i} className="rating-row">
             <span>{s.star} <i className="bi bi-star-fill text-warning"></i></span>
             <div className="bar">
-              <div className="bar-fill" style={{width: `${s.percent}%`}}></div>
+              <div className="bar-fill" style={{ width: `${s.percent}%` }}></div>
             </div>
             <span className="percent">{s.percent}%</span>
           </div>
@@ -67,16 +67,18 @@ export default function ReviewBox({ eventId }) {
       <hr />
 
       {/* Danh sách review */}
-      {reviews.map(r => (
-        <div key={r.id} className="review-item">
-          <h6 className="fw-bold">{r.email}</h6>
-          <div>{renderStars(r.rating)}</div>
-          <p>{r.comment}</p>
-          <small className="text">
-            {new Date(r.date).toLocaleDateString("vi-VN")}
-          </small>
-        </div>
-      ))}
+      <div className="overflow-auto" style={{ maxHeight: "300px" }}>
+        {reviews.reverse().map(r => (
+          <div key={r.id} className="review-item">
+            <h6 className="fw-bold">{r.email}</h6>
+            <div>{renderStars(r.rating)}</div>
+            <p>{r.comment}</p>
+            <small className="text">
+              {new Date(r.date).toLocaleDateString("vi-VN")}
+            </small>
+          </div>
+        ))}
+      </div>
 
     </div>
   );

@@ -8,12 +8,58 @@ const ContactPage = () => {
     <Container className="my-5">
       <Row>
         <Col md={6}>
-          <h2>Thông tin liên hệ</h2>
-          <p><strong>CLB Sự kiện F-Active</strong></p>
-          <p>Email: clbfactive1420@gmail.com</p>
-          <p>Điện thoại: 070 490 6670</p>
-          <p>Địa chỉ: 600 Nguyễn Văn Cừ nối dài, An Bình, Ninh Kiều, Cần Thơ</p>
-    
+          <h2
+            style={{
+              color: "var(--primary-color)",
+              marginBottom: "20px",
+            }}
+            className="mt-5 py-4"
+          >
+            Thông tin liên hệ
+          </h2>
+          <p style={{ fontSize: "1.1rem", marginBottom: "10px" }}>
+            <img src="/assets/images/loading-logo.png" className="logo-loading-img" style={{ width: "40px" }}></img> <strong>Câu Lạc Bộ Sự kiện F-Active</strong>
+          </p>
+
+          <div style={{ lineHeight: "1.8", fontSize: "1rem" }}>
+            <p>
+              <strong>Email:</strong>{" "}
+              <a
+                href="mailto:clbfactive1420@gmail.com"
+                style={{
+                  color: "var(--primary-color)",
+                  textDecoration: "none",
+                }}
+              >
+                clbfactive1420@gmail.com
+              </a>
+            </p>
+            <p>
+              <strong>Điện thoại:</strong>{" "}
+              <a
+                href="tel:0704906670"
+                style={{
+                  color: "var(--primary-color)",
+                  textDecoration: "none",
+                }}
+              >
+                070 490 6670
+              </a>
+            </p>
+            <p>
+              <strong>Địa chỉ:</strong> 600 Nguyễn Văn Cừ nối dài, An Bình, Ninh
+              Kiều, Cần Thơ
+            </p>
+            <hr />
+            <p style={{ fontStyle: "italic", color: "#555" }}>
+              <strong>Tiêu chí:</strong> Trang web mang đến trải nghiệm sự kiện
+              năng động hiện đại và đầy cảm hứng — nơi bạn dễ dàng kết nối, khám
+              phá và tham gia những hoạt động bùng nổ cùng{" "}
+              <strong>F-Active!</strong>
+            </p>
+            <img src="/assets/images/FAC-logo-text-b.png" width={"50%"} className="d-flex m-auto"></img>
+
+          </div>
         </Col>
 
         <Col md={6}>

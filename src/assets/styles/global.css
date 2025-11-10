@@ -32,6 +32,11 @@ body {
   padding-right: 1.2rem;
 }
 
+.green-btn {
+  background-color: var(--primary-color);
+  border: #2dc275;
+}
+
 /* STYLE NAVBAR */
 
 .nav-brand-text {
@@ -41,6 +46,7 @@ body {
   transition: all ease-in-out .3s;
 }
 
+.navbar-brand:focus,
 .nav-brand-text:hover {
   color: var(--white-color);
   cursor: pointer;
@@ -109,4 +115,37 @@ body {
 
 .footer-map iframe {
   border-radius: 8px;
+}
+
+.event-form-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.event-form-wrapper form {
+  width: 900px;
+}
+
+.logo-loading-img {
+  width: 100px;
+  height: auto;
+  animation: flip 0.6s infinite ease-in-out;
+  transform-style: preserve-3d;
+  /* để flip 3D mượt */
+}
+
+
+/* Animation */
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
 }

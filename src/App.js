@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Suspense, lazy } from 'react';
+
 
 // Component chung
 import Navbar from "./components/Navbar";
@@ -28,8 +30,10 @@ function App() {
     <Router>
       <div className="app-container">
         <Navbar />
-
-        <main className="main-content">
+        {/* <div className="text-center fs-5" style={{ margin: "5rem 0", color: "#2dc275" }}>Loading...</div> */}
+        <Suspense fallback={<div class="d-flex m-auto">
+          <img src="/assets/images/loading-logo.png" alt="Logo" className="logo-loading-img" />
+        </div>}>
           <Routes>
             {/* Public */}
             <Route path="/" element={<HomePage />} />
@@ -57,8 +61,8 @@ function App() {
         </main>
 
         <Footer />
-      </div>
-    </Router>
+      </div >
+    </Router >
   );
 }
 

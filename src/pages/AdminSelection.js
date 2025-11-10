@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Container, Row, Col } from "react-bootstrap";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { getLoggedInAdmin } from "../api/loginApi";
+import { getLoggedInAdmin, logoutAdmin } from "../api/loginApi";
 
 /**
 * Function selection page after admin login
@@ -11,35 +11,35 @@ import { getLoggedInAdmin } from "../api/loginApi";
 * @param {Function} props.onSelect - callback when selecting function ("events" or "messages")
 */
 const AdminSelectionPage = ({ admin, onSelect }) => {
-    const location = useLocation();
-    const navigate = useNavigate();
-    admin = admin || location.state?.admin || getLoggedInAdmin();
+  const location = useLocation();
+  const navigate = useNavigate();
+  admin = admin || location.state?.admin || getLoggedInAdmin();
 
-    useEffect(() => {
-        if (!admin) navigate("/adminlogin");
-    }, [admin, navigate]);
+  useEffect(() => {
+    if (!admin) navigate("/adminlogin");
+  }, [admin, navigate]);
 
-    const handleLogout = () => {
-        localStorage.removeItem("admin");
-        navigate("/adminlogin");
-    };
+  const handleLogout = () => {
+    logoutAdmin();
+    navigate("/adminlogin");
+  };
 
 
-    return (
-        <Container
-            fluid
-            className="d-flex flex-column align-items-center justify-content-center"
-            style={{ height: "90vh" }}
-        >
-            <h4 className="mb-5">Xin chào, {admin?.username || "Admin"}</h4>
+  return (
+    <Container
+      fluid
+      className="d-flex flex-column align-items-center justify-content-center"
+      style={{ height: "90vh" }}
+    >
+      <h4 className="mb-5">Xin chào, {admin?.username || "Admin"}</h4>
 
-            <Row className="w-100 justify-content-center">
-                <Col xs="auto" className="mx-3">
-                    <Button className="px-5 py-3 fw-bold text-white btn-login"
-                        onClick={() => navigate("/eventmanager")}>
-                        Quản lý sự kiện
-                    </Button>
-                </Col>
+      <Row className="w-100 justify-content-center">
+        <Col xs="auto" className="mx-3">
+          <Button className="px-5 py-3 fw-bold text-white btn-login"
+            onClick={() => navigate("/eventmanager")}>
+            Quản lý sự kiện
+          </Button>
+        </Col>
 
                 <Col xs="auto" className="mx-3">
                     <Button className="px-5 py-3 fw-bold text-white btn-login"
@@ -58,8 +58,8 @@ const AdminSelectionPage = ({ admin, onSelect }) => {
             </div>
 
 
-        </Container>
-    );
+    </Container>
+  );
 };
 
 export default AdminSelectionPage;
