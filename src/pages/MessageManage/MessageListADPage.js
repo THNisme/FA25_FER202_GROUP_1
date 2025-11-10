@@ -61,7 +61,7 @@ const MessageListADPage = () => {
 
     if (result.isConfirmed) {
       try {
-        await axios.delete(`http://localhost:5000/adminmessages/${Number(id)}`);
+        await axios.delete(`http://localhost:5000/adminmessages/${id}`);
         const numericId = Number(id);
         setMessages((prev) => prev.filter((m) => m.id !== numericId));
 
