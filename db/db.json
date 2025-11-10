@@ -1,27 +1,127 @@
 {
   "events": [
     {
-      "id": 1,
-      "title": "Chrismas with F-Active",
-      "category": "Mùa Đông",
-      "description": "...",
-      "image": "x-mas.jpg",
-      "price": 10000
+      "id": "9",
+      "title": "Lễ Hội Ánh Sáng Hội An",
+      "category": "Lễ hội",
+      "description": "Immerse yourself in the magical night of lanterns along the ancient streets of Hội An.",
+      "image": "assets/images/anh2.jpg",
+      "price": 120000
+    },
+    {
+      "id": "10",
+      "title": "Hòa Nhạc Giao Hưởng Mùa Thu",
+      "category": "Âm nhạc",
+      "description": "A mesmerizing night with classical symphonies performed by the National Orchestra.",
+      "image": "assets/images/anh3.jpg",
+      "price": 250000
+    },
+    {
+      "id": "11",
+      "title": "Workshop Nhiếp Ảnh Đường Phố",
+      "category": "Workshop",
+      "description": "Learn the art of street photography with professional photographers in Hà Nội.",
+      "image": "assets/images/anh4.jpg",
+      "price": 90000
+    },
+    {
+      "id": "12",
+      "title": "Triển Lãm Công Nghệ Tương Lai 2025",
+      "category": "Triển lãm",
+      "description": "Discover the latest innovations in AI, robotics, and smart devices shaping the future.",
+      "image": "assets/images/anh5.jpg",
+      "price": 200000
+    },
+    {
+      "id": "13",
+      "title": "Liên Hoan Phim Việt Nam",
+      "category": "Phim ảnh",
+      "description": "Celebrate the best of Vietnamese cinema with screenings, talks, and red carpet events.",
+      "image": "assets/images/anh6.jpg",
+      "price": 180000
+    },
+    {
+      "id": "14",
+      "title": "Giải Chạy Vì Môi Trường",
+      "category": "Thể thao",
+      "description": "Join thousands in a charity run to promote sustainability and green living.",
+      "image": "assets/images/anh7.jpg",
+      "price": 80000
     }
   ],
   "messages": [
     {
-      "id": 1,
-      "name": "Nguyễn Văn A",
-      "email": "a@gmail.com",
-      "phone": "0123456",
-      "content": "Cho hỏi vé bao nhiêu?",
+      "id": "1",
+      "name": "kiệt",
+      "email": "kiettran20082005@gmail.com",
+      "phone": "0333099841",
+      "content": "em đã yêu một người có ước mơ, một người làm em thấy hoang mang lo sợ,sợ yêu một người không phải như em đã từng,...nếu như anh quay về phía đó, liệu anh có còn thấy em,..lệ trong đổi mắt sao mà lấp đi ánh nắng mặt tr,..",
       "status": "unread"
+    },
+    {
+      "id": "3",
+      "name": "kiệt",
+      "email": "kiettt.ce190871@gmail.com",
+      "phone": "0333099841",
+      "content": "ads",
+      "status": "read"
+    }
+  ],
+  "adminmessages": [
+    {
+      "id": "2",
+      "receiverName": "kiệt",
+      "receiverEmail": "kiettran20082005@gmail.com",
+      "receiverPhone": "",
+      "content": "hello",
+      "originalMessageId": "1",
+      "status": "unread",
+      "createdAt": "2025-11-09T17:57:40.801Z"
+    },
+    {
+      "id": "3",
+      "receiverName": "trần tuấn kiệt",
+      "receiverEmail": "kiettt.ce190871@gmail.com",
+      "receiverPhone": "0333099841",
+      "content": "bạn có buồn ngủ không",
+      "originalMessageId": "4",
+      "status": "unread",
+      "createdAt": "2025-11-09T18:09:59.599Z"
+    },
+    {
+      "id": "5",
+      "receiverName": "kiệt",
+      "receiverEmail": "kiettran20082005@gmail.com",
+      "receiverPhone": "0333099841",
+      "content": "heheheheh",
+      "originalMessageId": "1",
+      "status": "unread",
+      "createdAt": "2025-11-09T19:13:20.254Z"
+    },
+    {
+      "id": "6",
+      "receiverName": "kiệt",
+      "receiverEmail": "kiettran20082005@gmail.com",
+      "receiverPhone": "0333099841",
+      "content": "tốt lắm",
+      "originalMessageId": "1",
+      "status": "unread",
+      "createdAt": "2025-11-09T23:18:26.413Z"
+    },
+    {
+      "id": 7,
+      "receiverName": "kiệt",
+      "receiverEmail": "kiettran20082005@gmail.com",
+      "receiverPhone": "0333099841",
+      "content": "t đói quá",
+      "originalMessageId": "1",
+      "status": "unread",
+      "createdAt": "2025-11-10T01:14:41.969Z"
     }
   ],
   "admins": [
     {
-      "id": 1,
+      "id": "1",
       "username": "admin",
       "password": "123456"
     }
