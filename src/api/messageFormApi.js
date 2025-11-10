@@ -43,7 +43,7 @@ export const updateMessage = async (id, updatedData) => {
  * @returns {Promise<Object>}
  */
 export const getAdminMessageById = async (id) => {
-  const res = await axios.get(`${ADMIN_API_URL}/${Number(id)}`);
+  const res = await axios.get(`${ADMIN_API_URL}/${id}`);
   return res.data;
 };
 
@@ -88,7 +88,7 @@ export const sendReplyMessage = async (messageData) => {
 
   // Tạo bản ghi mới
   const newMessage = {
-    id: nextId,
+    id: nextId.toString(),
     receiverName: messageData.receiverName || "Người nhận",
     receiverEmail: email,
     receiverPhone: phone,

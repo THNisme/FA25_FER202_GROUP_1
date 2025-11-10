@@ -14,7 +14,12 @@ function EventCard({ events }) {
           >
             <div className="event-image-container">
               <img
-                src={event.image}
+                src={
+                  event.image?.startsWith("http://") ||
+                    event.image?.startsWith("https://")
+                    ? event.image
+                    : `/${event.image}`
+                }
                 alt={event.title}
                 className="event-image"
               />

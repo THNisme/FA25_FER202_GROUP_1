@@ -1,19 +1,11 @@
 {
   "events": [
     {
-      "id": "9",
-      "title": "Lễ Hội Ánh Sáng Hội An",
-      "category": "Lễ hội",
-      "description": "Immerse yourself in the magical night of lanterns along the ancient streets of Hội An.",
-      "image": "assets/images/anh2.jpg",
-      "price": 120000
-    },
-    {
       "id": "10",
       "title": "Hòa Nhạc Giao Hưởng Mùa Thu",
       "category": "Âm nhạc",
       "description": "A mesmerizing night with classical symphonies performed by the National Orchestra.",
-      "image": "assets/images/anh3.jpg",
+      "image": "assets/images/anh1.jpg",
       "price": 250000
     },
     {
@@ -21,15 +13,24 @@
       "title": "Workshop Nhiếp Ảnh Đường Phố",
       "category": "Workshop",
       "description": "Learn the art of street photography with professional photographers in Hà Nội.",
-      "image": "assets/images/anh4.jpg",
-      "price": 90000
+      "image": "https://picsum.photos/1280/720?random=6",
+      "price": 90000,
+      "reviews": [
+        {
+          "id": 1,
+          "email": "nghiath.ce191115@gmail.com",
+          "rating": 4,
+          "comment": "Test",
+          "date": "2025-11-10T02:40:47.038Z"
+        }
+      ]
     },
     {
       "id": "12",
       "title": "Triển Lãm Công Nghệ Tương Lai 2025",
       "category": "Triển lãm",
       "description": "Discover the latest innovations in AI, robotics, and smart devices shaping the future.",
-      "image": "assets/images/anh5.jpg",
+      "image": "https://picsum.photos/1280/720?random=5",
       "price": 200000
     },
     {
@@ -37,7 +38,7 @@
       "title": "Liên Hoan Phim Việt Nam",
       "category": "Phim ảnh",
       "description": "Celebrate the best of Vietnamese cinema with screenings, talks, and red carpet events.",
-      "image": "assets/images/anh6.jpg",
+      "image": "https://picsum.photos/1280/720?random=4",
       "price": 180000
     },
     {
@@ -45,19 +46,27 @@
       "title": "Giải Chạy Vì Môi Trường",
       "category": "Thể thao",
       "description": "Join thousands in a charity run to promote sustainability and green living.",
-      "image": "assets/images/anh7.jpg",
+      "image": "https://picsum.photos/1280/720?random=3",
       "price": 80000
+    },
+    {
+      "id": "15",
+      "title": "Giải Cầu Lông",
+      "category": "Thể thao",
+      "description": "Join thousands in a charity run to promote sustainability and green living.",
+      "image": "https://picsum.photos/1280/720?random=1",
+      "price": 80000
+    },
+    {
+      "id": "16",
+      "title": "Giải Chạy Vì FPT",
+      "category": "Thể thao",
+      "description": "Join thousands in a charity run to promote sustainability and green living.",
+      "image": "https://picsum.photos/1280/720?random=2",
+      "price": 99000
     }
   ],
   "messages": [
-    {
-      "id": "1",
-      "name": "kiệt",
-      "email": "kiettran20082005@gmail.com",
-      "phone": "0333099841",
-      "content": "em đã yêu một người có ước mơ, một người làm em thấy hoang mang lo sợ,sợ yêu một người không phải như em đã từng,...nếu như anh quay về phía đó, liệu anh có còn thấy em,..lệ trong đổi mắt sao mà lấp đi ánh nắng mặt tr,..",
-      "status": "unread"
-    },
     {
       "id": "3",
       "name": "kiệt",
@@ -89,34 +98,14 @@
       "createdAt": "2025-11-09T18:09:59.599Z"
     },
     {
-      "id": "5",
-      "receiverName": "kiệt",
-      "receiverEmail": "kiettran20082005@gmail.com",
-      "receiverPhone": "0333099841",
-      "content": "heheheheh",
-      "originalMessageId": "1",
-      "status": "unread",
-      "createdAt": "2025-11-09T19:13:20.254Z"
-    },
-    {
-      "id": "6",
-      "receiverName": "kiệt",
-      "receiverEmail": "kiettran20082005@gmail.com",
-      "receiverPhone": "0333099841",
-      "content": "tốt lắm",
-      "originalMessageId": "1",
-      "status": "unread",
-      "createdAt": "2025-11-09T23:18:26.413Z"
-    },
-    {
       "id": 7,
       "receiverName": "kiệt",
-      "receiverEmail": "kiettran20082005@gmail.com",
-      "receiverPhone": "0333099841",
-      "content": "t đói quá",
-      "originalMessageId": "1",
+      "receiverEmail": "kiettt.ce190871@gmail.com",
+      "receiverPhone": "",
+      "content": "ghbgbh",
+      "originalMessageId": "3",
       "status": "unread",
-      "createdAt": "2025-11-10T01:14:41.969Z"
+      "createdAt": "2025-11-10T03:13:57.759Z"
     }
   ],
   "admins": [
