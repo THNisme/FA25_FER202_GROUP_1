@@ -14,7 +14,7 @@ function EventCard({ events }) {
           >
             <div className="event-image-container">
               <img
-                src={event.image}
+                src={`/${event.image}`}
                 alt={event.title}
                 className="event-image"
               />

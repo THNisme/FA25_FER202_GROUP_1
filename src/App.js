@@ -17,6 +17,7 @@ import EventDetailPage from "./pages/EventDetailPage";
 import AdminSelectionPage from "./pages/AdminSelection";
 import AdminLoginPage from "./pages/AdminLoginPage ";
 import EventListPage from "./pages/EventManage/EventListPage";
+import EventFormPage from "./pages/EventFormPage";
 import MessageListPage from "./pages/MessageManage/MessageListPage";
 import MessageListADPage from "./pages/MessageManage/MessageListADPage";
 import MessageADPage from "./pages/MessageManage/MessageADPage";
@@ -46,6 +47,8 @@ function App() {
             <Route path="/adminselection" element={<AdminSelectionPage />} />
 
             {/* Event Manager */}
+            <Route path="/eventform" element={<EventFormPage />} />
+            <Route path="/eventform/:id/:action" element={<EventFormPage />} />
             <Route path="/eventmanager" element={<EventListPage />} />
             <Route path="/eventmanager/events/:id" element={<EventDetailPage />} />
 

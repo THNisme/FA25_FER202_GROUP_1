@@ -5,7 +5,7 @@
       "title": "Lễ Hội Ánh Sáng Hội An",
       "category": "Lễ hội",
       "description": "Immerse yourself in the magical night of lanterns along the ancient streets of Hội An.",
-      "image": "assets/images/anh2.jpg",
+      "image": "assets/images/anh1.jpg",
       "price": 120000
     },
     {
@@ -13,7 +13,7 @@
       "title": "Hòa Nhạc Giao Hưởng Mùa Thu",
       "category": "Âm nhạc",
       "description": "A mesmerizing night with classical symphonies performed by the National Orchestra.",
-      "image": "assets/images/anh3.jpg",
+      "image": "assets/images/anh1.jpg",
       "price": 250000
     },
     {
@@ -21,15 +21,24 @@
       "title": "Workshop Nhiếp Ảnh Đường Phố",
       "category": "Workshop",
       "description": "Learn the art of street photography with professional photographers in Hà Nội.",
-      "image": "assets/images/anh4.jpg",
-      "price": 90000
+      "image": "assets/images/anh1.jpg",
+      "price": 90000,
+      "reviews": [
+        {
+          "id": 1,
+          "email": "nghiath.ce191115@gmail.com",
+          "rating": 4,
+          "comment": "Test",
+          "date": "2025-11-10T02:40:47.038Z"
+        }
+      ]
     },
     {
       "id": "12",
       "title": "Triển Lãm Công Nghệ Tương Lai 2025",
       "category": "Triển lãm",
       "description": "Discover the latest innovations in AI, robotics, and smart devices shaping the future.",
-      "image": "assets/images/anh5.jpg",
+      "image": "assets/images/anh1.jpg",
       "price": 200000
     },
     {
@@ -37,7 +46,7 @@
       "title": "Liên Hoan Phim Việt Nam",
       "category": "Phim ảnh",
       "description": "Celebrate the best of Vietnamese cinema with screenings, talks, and red carpet events.",
-      "image": "assets/images/anh6.jpg",
+      "image": "assets/images/anh1.jpg",
       "price": 180000
     },
     {
@@ -45,7 +54,7 @@
       "title": "Giải Chạy Vì Môi Trường",
       "category": "Thể thao",
       "description": "Join thousands in a charity run to promote sustainability and green living.",
-      "image": "assets/images/anh7.jpg",
+      "image": "assets/images/anh1.jpg",
       "price": 80000
     }
   ],
