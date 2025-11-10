@@ -41,21 +41,21 @@ const AdminSelectionPage = ({ admin, onSelect }) => {
           </Button>
         </Col>
 
-        <Col xs="auto" className="mx-3">
-          <Button className="px-5 py-3 fw-bold text-white btn-login"
-            onClick={() => navigate("/messagesmanager")}>
-            Quản lý Tin nhắn
-          </Button>
-        </Col>
-      </Row>
-      <div className="d-flex justify-content-center">
-        <Button
-          className="mt-5 px-4 py-2 btn-login"
-          onClick={handleLogout}
-        >
-          Đăng xuất
-        </Button>
-      </div>
+                <Col xs="auto" className="mx-3">
+                    <Button className="px-5 py-3 fw-bold text-white btn-login"
+                        onClick={() => navigate("/messages")}>
+                        Quản lý Tin nhắn
+                    </Button>
+                </Col>
+            </Row>
+            <div className="d-flex justify-content-center">
+                <Button
+                    className="mt-5 px-4 py-2 btn-login"
+                    onClick={handleLogout}
+                >
+                    Đăng xuất
+                </Button>
+            </div>
 
 
     </Container>
