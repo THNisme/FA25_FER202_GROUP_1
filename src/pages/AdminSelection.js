@@ -50,7 +50,7 @@ const AdminSelectionPage = ({ admin, onSelect }) => {
 
         <Col xs="auto" className="mx-3">
           <Button className="px-5 py-3 fw-bold text-white btn-login"
-            onClick={() => navigate("/messagesmanager")}>
+            onClick={() => navigate("/messages")}>
             Quản lý Tin nhắn
           </Button>
         </Col>

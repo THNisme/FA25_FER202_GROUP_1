@@ -1,0 +1,39 @@
+.event-title-click {
+  cursor: pointer;
+  color: black;
+  transition: 0.2s ease;
+  font-weight: 500;
+}
+
+.event-title-click:hover {
+  color: #0d6efd;   /* xanh bootstrap */
+}
+
+.swal-outline-danger {
+  padding: 6px 20px !important;
+  border: 1px solid #dc3545 !important;
+  color: #dc3545 !important;
+  background: transparent !important;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.swal-outline-danger:hover {
+  background: #dc3545 !important;
+  color: white !important;
+}
+
+.swal-outline-secondary {
+  padding: 6px 20px !important;
+  border: 1px solid #6c757d !important;
+  color: #6c757d !important;
+  background: transparent !important;
+  border-radius: 5px;
+  font-weight: 500;
+   margin-left: 20px !important;
+}
+
+.swal-outline-secondary:hover {
+  background: #6c757d !important;
+  color: white !important;
+}

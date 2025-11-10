@@ -3,33 +3,27 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from 'react';
 
 
-// Các bạn import component vào đây, như ví dụ của navbar và footer bên dưới
+// Component chung
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+
+// Pages
+import ContactPage from "./pages/ContactPage";
+import MessageDetailPage from "./pages/MessageManage/MessageDetailPage";
+import MessageFormPage from "./pages/MessageManage/MessageFormPage";
+import HomePage from "./pages/HomePage";
 import SearchBar from "./components/SearchBar";
-// Các bạn import page vào đây, như ví dụ bên dưới
-// import Home from "./pages/Home";
-// import About from "./pages/About";
+import EventDetailPage from "./pages/EventDetailPage";
+import AdminSelectionPage from "./pages/AdminSelection";
+import AdminLoginPage from "./pages/AdminLoginPage ";
+import EventListPage from "./pages/EventManage/EventListPage";
+import MessageListPage from "./pages/MessageManage/MessageListPage";
+import MessageListADPage from "./pages/MessageManage/MessageListADPage";
+import MessageADPage from "./pages/MessageManage/MessageADPage";
 
-import "./assets/styles/global.css"; // import global style
-import "./App.css"; // style riêng cho App
-
-const ContactPage = lazy(() => import('./pages/ContactPage'));
-const MessageListPage = lazy(() => import('./pages/MessageListPage'));
-const MessageDetailPage = lazy(() => import('./pages/MessageDetailPage'));
-const HomePage = lazy(() => delayImport(() => import('./pages/HomePage')));
-const EventDetailPage = lazy(() => import('./pages/EventDetailPage'));
-const EventFormPage = lazy(() => import('./pages/EventFormPage'));
-const AdminSelectionPage = lazy(() => import('./pages/AdminSelection'));
-const AdminLoginPage = lazy(() => import('./pages/AdminLoginPage '));
-
-function delayImport(fn, ms = 3500) {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      resolve(fn());
-    }, ms);
-  });
-}
+// Styles
+import "./assets/styles/global.css";
+import "./App.css";
 
 function App() {
   return (
@@ -41,22 +35,34 @@ function App() {
           <img src="/assets/images/loading-logo.png" alt="Logo" className="logo-loading-img" />
         </div>}>
           <Routes>
+            {/* Public */}
             <Route path="/" element={<HomePage />} />
             <Route path="/searchbar" element={<SearchBar />} />
             <Route path="/event/:id" element={<EventDetailPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/messages" element={<MessageListPage />} />
-            <Route path="/messages/:id" element={<MessageDetailPage />} />
+
+            {/* Admin */}
             <Route path="/adminlogin" element={<AdminLoginPage />} />
             <Route path="/adminselection" element={<AdminSelectionPage />} />
-            <Route path="/eventform" element={<EventFormPage />} />
-            <Route path="/eventform/:id/:action" element={<EventFormPage />} />
-          </Routes >
-        </Suspense >
 
+            {/* Event Manager */}
+            <Route path="/eventmanager" element={<EventListPage />} />
+            <Route path="/eventmanager/events/:id" element={<EventDetailPage />} />
+
+            {/* User Messages */}
+            <Route path="/messages" element={<MessageListPage />} />
+            <Route path="/messages/:id" element={<MessageDetailPage />} />
+            <Route path="/messages/reply/:id" element={<MessageFormPage />} />
+
+            {/* Admin Messages */}
+            <Route path="/messages/admin" element={<MessageListADPage />} />
+            <Route path="/messages/admin/:id" element={<MessageADPage />} />
+          </Routes>
+        </Suspense>
         <Footer />
       </div >
     </Router >
+
   );
 }
 
